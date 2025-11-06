@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: regular;
+}
+
+.background_layer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 88px;
+  top: 72px;
+  background-image: url(./assets/backgroundLayer.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.vector {
+  position: fixed;
+  bottom: 0;
+  left: 88px;
+  width: 220px;
+  height: 200px;
+  background-image: url(./assets/Vectorlight.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.ck-powered-by-balloon {
+  display: none !important;
+}
+
+.ck-editor__editable {
+  min-height: 200px;
+}

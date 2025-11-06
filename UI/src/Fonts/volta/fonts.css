@@ -1,0 +1,44 @@
+@font-face {
+  src: url(./VoltaModernText-Bold.woff);
+  font-family: "boldfamily";
+}
+@font-face {
+  src: url(./VoltaModernText-Roman.woff);
+  font-family: "regular";
+}
+@font-face {
+  src: url(./VoltaModernText-Medium.woff);
+  font-family: "medium";
+}
+@font-face {
+  src: url(./VoltaModernText-Italic.woff);
+  font-family: "italic";
+}
+@font-face {
+  src: url(./VoltaModernText-BoldItalic.woff);
+  font-family: "bolditalic";
+}
+@font-face {
+  src: url(./VoltaModernText-MediumItalic.woff);
+  font-family: "mediumitalic";
+}
+@font-face {
+  src: url(./VoltaModernDisplay-Light.woff);
+  font-family: "light";
+}
+@font-face {
+  src: url(./VoltaModernDisplay-Black.woff);
+  font-family: "displayblack";
+}
+@font-face {
+  src: url(./VoltaModernDisplay-Bold.woff);
+  font-family: "displaybold";
+}
+@font-face {
+  src: url(./VoltaModernDisplay-Light.woff);
+  font-family: "displaylight";
+}
+@font-face {
+  src: url(./VoltaModernDisplay-Medium.woff);
+  font-family: "displaymedium";
+}

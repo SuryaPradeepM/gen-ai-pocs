@@ -1,0 +1,40 @@
+# Loading
+  "simple_ppt_reader": true, # Set to true to utilize customized simple ppt reader which doesn't caption images
+  "vtt_reader": true, # Set to true to utilize customized VTT reader
+  "doc_intel_reader": false, # Leverage Azure AI Document Intelligence to parse Pdf, Docx, & Images
+
+# Embedding
+  "embedding_model": "text-embedding-ada-002", # "text-embedding-ada-002" / "pubmedbert-base-embeddings" / "pubmedbert-base-embeddings-matryoshka"
+
+
+# Chunking
+  "splitter": "sentence_splitter", # "sentence_splitter" / "semantic_splitter"
+
+  # Config, if using sentence_splitter
+  "chunk_size": 5000,
+  "chunk_overlap": 500,
+
+  # Config, if using semantic_splitter
+  "semantic_splitter_buffer_size": 3,
+  "semantic_splitter_breakpoint_percentile_thresh": 95,
+  "similarity_top_k": 5,
+
+
+# Node Post-Processing
+  "enable_post_processing": false,  # toggle node post processing
+  "node_metadata_keywords": 4, # no. of keywords to extract for the nodes
+
+
+# LLM
+  "temperature": 0, # LLM Temperature
+  "max_retries": 1, # Maximum retries on API timeout
+  "lower_case_prompts": false, # TODO: toggle for lower casing all prompts
+
+
+# General
+  "input_dir": "",  # dir containing docs to test
+  "num_workers": 4, # Set to maximum CPU Cores / Logical Processors Count
+  "show_progress": true,
+  "debug": true, # logging.DEBUG level for more verbose output
+  "use_async": false,
+  "streaming": false # Streaming output

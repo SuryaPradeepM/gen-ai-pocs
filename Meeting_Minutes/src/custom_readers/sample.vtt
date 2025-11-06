@@ -1,0 +1,2895 @@
+WEBVTT
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/212-0
+00:00:05.830 --> 00:00:08.308
+And to start with, we're going
+with the Super Charge field
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/212-1
+00:00:08.308 --> 00:00:08.560
+force.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/280-0
+00:00:08.830 --> 00:00:12.384
+So just to give like a you know
+a use case Briefing or the use
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/280-1
+00:00:12.384 --> 00:00:15.939
+case behind like what, what was
+the idea behind and how we are
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/280-2
+00:00:15.939 --> 00:00:19.606
+helping out the field force was
+available in the market like the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/280-3
+00:00:19.606 --> 00:00:23.105
+you know out in The Who is out
+in the market and going to the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/280-4
+00:00:23.105 --> 00:00:26.490
+HCP's for the promotions and
+everything for our drug right?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/299-0
+00:00:26.790 --> 00:00:29.554
+How we're able to help them and
+support them is something what
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/299-1
+00:00:29.554 --> 00:00:31.090
+we have done with the
+Supercharge.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/351-0
+00:00:31.260 --> 00:00:35.681
+So Supercharge is basically what
+we have created is sort of a
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/351-1
+00:00:35.681 --> 00:00:39.888
+tool right here where we are
+supporting the field force to
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/351-2
+00:00:39.888 --> 00:00:43.880
+actually prepare for the any
+drug, OK, they're going to
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/351-3
+00:00:43.880 --> 00:00:48.586
+basically go out into the market
+or talk to HCP's right for their
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/351-4
+00:00:48.586 --> 00:00:49.870
+promotions, right.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/361-0
+00:00:49.940 --> 00:00:51.210
+So how how we are doing this?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/370-0
+00:00:51.220 --> 00:00:53.090
+Like it's sort of a simulation
+of sort.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/396-0
+00:00:53.100 --> 00:00:57.277
+We can upload few document set
+of documents where any field
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/396-1
+00:00:57.277 --> 00:01:01.107
+representative could actually
+ask the questions to the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/396-2
+00:01:01.107 --> 00:01:02.360
+Supercharge right?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/424-0
+00:01:02.370 --> 00:01:06.705
+Where is it's like sort of a
+conversational UI is which which
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/424-1
+00:01:06.705 --> 00:01:10.831
+is there, right, and the uh, it
+will simulate the doctor's
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/424-2
+00:01:10.831 --> 00:01:12.020
+intention, right?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/441-0
+00:01:12.030 --> 00:01:14.909
+It will Supercharge will give
+you the questions and ask
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/441-1
+00:01:14.909 --> 00:01:16.040
+questions around that.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/464-0
+00:01:16.050 --> 00:01:20.536
+OK, it will basically monitor or
+give the feedback to the field
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/464-1
+00:01:20.536 --> 00:01:23.830
+force how they are actually uh
+giving answers.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/478-0
+00:01:23.840 --> 00:01:26.740
+How can they improvise like
+they'll be?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/495-0
+00:01:26.930 --> 00:01:29.648
+Uh, the further recommendations
+of sort right where we could
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/495-1
+00:01:29.648 --> 00:01:31.520
+actually give to the field force
+as well.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/517-0
+00:01:31.610 --> 00:01:36.276
+So right, so that that would be
+how we could be able to help the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/517-1
+00:01:36.276 --> 00:01:37.640
+field first, right.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/537-0
+00:01:37.790 --> 00:01:41.520
+So that is one thing and then so
+basically it's, but it will
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/537-1
+00:01:41.520 --> 00:01:44.150
+enhance the experience of the
+field force.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/579-0
+00:01:44.160 --> 00:01:48.012
+And HCP's, when the field force
+actually go into the basically
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/579-1
+00:01:48.012 --> 00:01:51.619
+into the market and and like
+promote their product, right,
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/579-2
+00:01:51.619 --> 00:01:55.348
+since they will have the better
+knowledge about the product,
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/579-3
+00:01:55.348 --> 00:01:58.650
+they would know what what's the
+drug efficacy, right?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/617-0
+00:01:58.660 --> 00:02:01.237
+So the all these details they
+could able to actually simulate
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/617-1
+00:02:01.237 --> 00:02:03.690
+through the tool and prepare
+themselves before they go out
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/617-2
+00:02:03.690 --> 00:02:06.060
+into the market and have an
+interactions with the HCP's.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/619-0
+00:02:06.420 --> 00:02:06.800
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/631-0
+00:02:06.860 --> 00:02:09.630
+So that's how and ultimately
+like.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/674-0
+00:02:09.640 --> 00:02:12.844
+Obviously, since there'll be a
+better interactions, right, we
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/674-1
+00:02:12.844 --> 00:02:16.255
+would have for, uh, better sales
+like business target, they'll be
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/674-2
+00:02:16.255 --> 00:02:19.149
+able to reach the business
+targets and that's how we're
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/674-3
+00:02:19.149 --> 00:02:21.940
+going to help the field force
+over all and all right.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/718-0
+00:02:22.030 --> 00:02:25.529
+So yeah, this is as a bit of a
+thinking behind the use case
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/718-1
+00:02:25.529 --> 00:02:28.854
+right from the Supercharge and
+now maybe we can take you
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/718-2
+00:02:28.854 --> 00:02:32.645
+through the tool so that it will
+be a bit more clear like how we
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/718-3
+00:02:32.645 --> 00:02:33.520
+are doing that.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/727-0
+00:02:37.680 --> 00:02:38.150
+OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/730-0
+00:02:38.700 --> 00:02:39.450
+Thank you, Vibhor.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/737-0
+00:02:41.340 --> 00:02:43.120
+So I'll quickly share my screen.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/743-0
+00:02:47.280 --> 00:02:47.440
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/754-0
+00:02:48.400 --> 00:02:53.870
+So so Supercharge is deployed in
+the Azure web app.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/762-0
+00:02:54.140 --> 00:02:55.550
+It has three layers to it.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/829-0
+00:02:55.720 --> 00:03:00.653
+The front end layer basically on
+reactor node and the middle
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/829-1
+00:03:00.653 --> 00:03:05.506
+layer which is or the middle
+where using the fast API is to
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/829-2
+00:03:05.506 --> 00:03:10.602
+connect the front end and the
+back end using APIs and the back
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/829-3
+00:03:10.602 --> 00:03:15.616
+end layer which is the core LLM
+layer using GPT 4 and text O2
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/829-4
+00:03:15.616 --> 00:03:19.660
+model and and now logging into
+the Supercharge a.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/860-0
+00:03:19.910 --> 00:03:24.701
+It has a the basic username and
+password based authentication
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/860-1
+00:03:24.701 --> 00:03:29.647
+which is encrypted and stored in
+the Cosmos DB and this this is
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/860-2
+00:03:29.647 --> 00:03:31.270
+not the landing page.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/870-0
+00:03:31.280 --> 00:03:35.870
+Usually the landing page will be
+the the calendar view and the.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/891-0
+00:03:37.640 --> 00:03:40.942
+And the field force will be able
+to create a new events or
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/891-1
+00:03:40.942 --> 00:03:42.230
+appointments over here.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/960-0
+00:03:42.240 --> 00:03:46.456
+Something like this based on
+their appointment or convenient
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/960-1
+00:03:46.456 --> 00:03:50.880
+time that I have scheduled with
+the doctors and when they click
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/960-2
+00:03:50.880 --> 00:03:55.027
+on the appointment button it
+gets enabled as a I mean there
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/960-3
+00:03:55.027 --> 00:03:59.104
+is a button that gets enabled
+called get supercharged over
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/960-4
+00:03:59.104 --> 00:04:03.321
+here and apart from that there
+is also a Workspace button on
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/960-5
+00:04:03.321 --> 00:04:04.150
+the sidebar.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/982-0
+00:04:05.460 --> 00:04:09.294
+So when we click on this
+Workspace button, the admins
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/982-1
+00:04:09.294 --> 00:04:13.980
+will have the documents uploaded
+in the corresponding workspaces.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/991-0
+00:04:13.990 --> 00:04:19.400
+So Supercharge is built to
+support 3 languages.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1047-0
+00:04:19.490 --> 00:04:24.453
+English, Chinese and Japanese
+and here also if I'm clicking on
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1047-1
+00:04:24.453 --> 00:04:29.102
+any of the workspaces, the
+English Workspace let us assume
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1047-2
+00:04:29.102 --> 00:04:33.908
+and there is an ask Supercharge
+button that will get enabled
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1047-3
+00:04:33.908 --> 00:04:38.714
+over here which will take this
+to the the the core LLM layer
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1047-4
+00:04:38.714 --> 00:04:38.950
+uh.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1124-0
+00:04:38.980 --> 00:04:43.922
+So as soon as the documents are
+uploaded it will be chunked and
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1124-1
+00:04:43.922 --> 00:04:48.401
+indexed and the indexes will get
+created in Azure and the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1124-2
+00:04:48.401 --> 00:04:53.111
+summarization will happen on the
+API layer and there will be
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1124-3
+00:04:53.111 --> 00:04:57.976
+individual summary of the chunks
+that will get created 1st and
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1124-4
+00:04:57.976 --> 00:05:02.455
+then there will be an overall
+general summary for all the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1124-5
+00:05:02.455 --> 00:05:06.933
+documents that is getting
+uploaded in the Workspace we'll
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1124-6
+00:05:06.933 --> 00:05:07.860
+get created.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1149-0
+00:05:10.120 --> 00:05:13.923
+So as I said, the summarization
+happens on the API layer which
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1149-1
+00:05:13.923 --> 00:05:16.580
+will feed as the input for these
+questions.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1178-0
+00:05:16.590 --> 00:05:18.967
+There are like in in chat in
+charge PT we have seen like
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1178-1
+00:05:18.967 --> 00:05:21.428
+there there will be 4 questions
+that could generate at the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1178-2
+00:05:21.428 --> 00:05:21.720
+bottom.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1212-0
+00:05:21.730 --> 00:05:24.944
+Similarly, in Supercharge also
+we have 4 questions that gets
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1212-1
+00:05:24.944 --> 00:05:28.052
+created which is based on the
+summary of the the documents
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1212-2
+00:05:28.052 --> 00:05:30.950
+that is coming out of all the
+things in the workspace.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1243-0
+00:05:32.340 --> 00:05:36.463
+So this is this is all about
+calendar and the Workspace and
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1243-1
+00:05:36.463 --> 00:05:40.449
+here we have got 4 categories
+which are Suraj is going to
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1243-2
+00:05:40.449 --> 00:05:43.060
+explain about each of the
+categories.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1278-0
+00:05:44.390 --> 00:05:47.892
+Umm yeah, so in each Workspace
+we'll feature the ask
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1278-1
+00:05:47.892 --> 00:05:51.527
+Supercharge section and in the
+Ask Supercharge section
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1278-2
+00:05:51.527 --> 00:05:55.426
+basically user can query through
+the knowledge base of the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1278-3
+00:05:55.426 --> 00:05:56.880
+Workspace they select.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1295-0
+00:05:56.930 --> 00:06:02.551
+So right now Ruthran is in a
+drug Workspace like KESIMPTA
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1295-1
+00:06:02.551 --> 00:06:03.520
+Workspace.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1312-0
+00:06:03.530 --> 00:06:08.284
+So here user can input their own
+query or maybe choose from this
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1312-1
+00:06:08.284 --> 00:06:10.040
+pre populated questions.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1318-0
+00:06:10.190 --> 00:06:11.940
+So we have 4 queries, right?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1331-0
+00:06:11.950 --> 00:06:15.418
+All categories drug efficacy,
+adverse events and objects and
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1331-1
+00:06:15.418 --> 00:06:15.930
+handling.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1343-0
+00:06:16.060 --> 00:06:19.870
+So user can query within any of
+these categories, right?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1355-0
+00:06:19.880 --> 00:06:22.970
+And let's suppose user will
+input their query Ruthran.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1376-0
+00:06:22.980 --> 00:06:28.210
+Maybe you can input one query,
+yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1379-0
+00:06:25.540 --> 00:06:27.840
+Yeah, I have problem sample
+question that you can.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1401-0
+00:06:28.300 --> 00:06:31.708
+So whenever user will input the
+query basically there will be a
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1401-1
+00:06:31.708 --> 00:06:34.530
+semantic search through the
+complete knowledge base.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1429-0
+00:06:34.600 --> 00:06:37.864
+The knowledge base, again as
+Ruthran mentioned, may include
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1429-1
+00:06:37.864 --> 00:06:41.129
+all the different PDF and the
+word documents which the user
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1429-2
+00:06:41.129 --> 00:06:42.870
+upload for that particular drug.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1453-0
+00:06:42.940 --> 00:06:47.474
+So after getting the results of
+the semantic search, the LLM
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1453-1
+00:06:47.474 --> 00:06:51.190
+will provide a constructive
+answer to that query.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1468-0
+00:06:51.720 --> 00:06:55.370
+So yeah, so for this query this
+is the answer.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1501-0
+00:06:55.500 --> 00:06:59.607
+So here user can like query
+through the complete thing and
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1501-1
+00:06:59.607 --> 00:07:03.366
+in this sections out of these
+four sections right the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1501-2
+00:07:03.366 --> 00:07:06.150
+objections section actually
+stands out.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1520-0
+00:07:06.160 --> 00:07:10.171
+Here user can inquire inquire
+about any of the objections that
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1520-1
+00:07:10.171 --> 00:07:11.190
+they might have.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1548-0
+00:07:12.040 --> 00:07:17.205
+So yeah, and they can also
+request the LLM to generate any
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1548-1
+00:07:17.205 --> 00:07:20.970
+objections like we have given a
+like here.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1566-0
+00:07:20.980 --> 00:07:24.284
+If you see the 4th question is
+actually to suggest some
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1566-1
+00:07:24.284 --> 00:07:26.290
+potential objections from the
+CP.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1591-0
+00:07:26.540 --> 00:07:30.935
+So the field force can actually
+ask Supercharge to generate the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1591-1
+00:07:30.935 --> 00:07:35.399
+objections and basically clarify
+their objections before they go
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1591-2
+00:07:35.399 --> 00:07:36.360
+to the doctor.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1614-0
+00:07:37.180 --> 00:07:41.850
+So this is the idea behind Ask
+Supercharge and yeah and here we
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1614-1
+00:07:41.850 --> 00:07:45.060
+have enabled the streaming
+feature as well.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1644-0
+00:07:45.070 --> 00:07:48.130
+So that user doesn't need to
+wait for the complete response
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1644-1
+00:07:48.130 --> 00:07:51.240
+to come and they can like go
+through go and read through the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1644-2
+00:07:51.240 --> 00:07:52.770
+response as and when it comes.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1665-0
+00:07:57.960 --> 00:08:01.840
+Also like one more feature we
+have here in this screen which
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1665-1
+00:08:01.840 --> 00:08:03.430
+is the save chat feature.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1697-0
+00:08:03.440 --> 00:08:07.748
+So user can actually save the
+existing chat or umm they can
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1697-1
+00:08:07.748 --> 00:08:12.057
+also review the safe chats so
+that feature is also there at
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1697-2
+00:08:12.057 --> 00:08:14.570
+the top Ruthran if you can
+scroll.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1714-0
+00:08:14.690 --> 00:08:20.099
+Yeah, using this button user can
+save the chat, so this is about
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1707-0
+00:08:14.860 --> 00:08:16.100
+Yeah, this one.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1714-1
+00:08:20.099 --> 00:08:21.430
+Ask Supercharge.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1727-0
+00:08:23.950 --> 00:08:28.960
+The last part is for simulation
+over to you Ruthran.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1729-0
+00:08:29.700 --> 00:08:30.290
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1742-0
+00:08:30.880 --> 00:08:34.770
+So yes, I think this is your yet
+to complete.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1745-0
+00:08:35.240 --> 00:08:35.870
+OK, fine.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1768-0
+00:08:36.140 --> 00:08:41.085
+So Simulation part in the
+simulation LLM will act as a
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1768-1
+00:08:41.085 --> 00:08:45.850
+doctor and it will ask questions
+to the field force.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1791-0
+00:08:47.260 --> 00:08:50.625
+This will help field forced to
+get prepared for the interview
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1791-1
+00:08:50.625 --> 00:08:52.470
+before they visit to the
+doctors.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1801-0
+00:08:53.760 --> 00:08:57.110
+We have given the Doctor Persona
+to the LLM here.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1843-0
+00:08:58.580 --> 00:09:03.359
+We also use Azure speech
+services to convert the speech
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1843-1
+00:09:03.359 --> 00:09:08.224
+to text and for the LLM to
+process and the response from
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1843-2
+00:09:08.224 --> 00:09:13.088
+the LLM will be getting
+converted from text to speech or
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1843-3
+00:09:13.088 --> 00:09:14.710
+using V yeah right.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1848-0
+00:09:14.780 --> 00:09:16.770
+So now I'll I'll have this.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1853-0
+00:09:18.190 --> 00:09:19.000
+Hello doctor.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1855-0
+00:09:19.150 --> 00:09:20.140
+I am Ruthran.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1863-0
+00:09:20.190 --> 00:09:23.190
+I'm here to discuss about the
+KESIMPTA drug.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1872-0
+00:09:34.380 --> 00:09:35.300
+It's a bit slow today.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1900-0
+00:09:37.240 --> 00:09:41.860
+It it it, it gives the audio
+also enabled so it has that both
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1900-1
+00:09:41.860 --> 00:09:45.660
+both the text and the audio and
+explain the audio.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1927-0
+00:09:45.670 --> 00:09:50.282
+I don't have the option to
+enable the audio, I mean to to
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1927-1
+00:09:50.282 --> 00:09:55.450
+show the audio but within waters
+environnent but yeah, so it it.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1948-0
+00:09:55.460 --> 00:10:00.811
+It basically asks now if I it
+it's asking about a introduction
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1948-1
+00:10:00.811 --> 00:10:03.190
+to KESIMPTA drug, right, so.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1963-0
+00:10:05.010 --> 00:10:08.293
+OK, Nimita is the drug which is
+used to treat multiple
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1963-1
+00:10:08.293 --> 00:10:08.890
+sclerosis.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1975-0
+00:10:20.280 --> 00:10:22.670
+So basically an unknown the
+conversation begins.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1985-0
+00:10:22.680 --> 00:10:24.450
+Uh, it will ask several
+questions.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1990-0
+00:10:24.760 --> 00:10:27.490
+A after one after the other.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/1996-0
+00:10:37.600 --> 00:10:37.920
+Yes.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2007-0
+00:10:37.930 --> 00:10:41.697
+So this section also like shows
+the audio capability within
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2007-1
+00:10:41.697 --> 00:10:42.450
+supercharge.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2025-0
+00:10:42.460 --> 00:10:46.052
+Here we can input the audio and
+even get the output in the form
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2025-1
+00:10:46.052 --> 00:10:46.670
+of a audio.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2075-0
+00:10:46.860 --> 00:10:50.835
+So and using this section,
+basically user can or the field
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2075-1
+00:10:50.835 --> 00:10:54.811
+force can actually from ohh
+simulate or talk to the doctor
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2075-2
+00:10:54.811 --> 00:10:58.921
+like simulate their conversation
+with the doctor before they
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2075-3
+00:10:58.921 --> 00:11:02.694
+visit the Doctor, ensuring that
+they are ready with any
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2075-4
+00:11:02.694 --> 00:11:04.850
+questions the doctor might have.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2082-0
+00:11:11.560 --> 00:11:11.810
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2087-0
+00:11:11.820 --> 00:11:14.540
+So this is all about
+Supercharge.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2093-0
+00:11:14.550 --> 00:11:17.700
+So any questions that you have?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2101-0
+00:11:20.590 --> 00:11:22.310
+So this is Nishan.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2105-0
+00:11:23.430 --> 00:11:23.840
+Gotcha.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2107-0
+00:11:25.280 --> 00:11:25.670
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2112-0
+00:11:25.680 --> 00:11:26.970
+So we complete questions.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2152-0
+00:11:26.980 --> 00:11:32.168
+So one question is so as we saw
+right, I mean the drug name, you
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2152-1
+00:11:32.168 --> 00:11:37.356
+did not pick correctly like they
+sent out the spelling was wrong
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2152-2
+00:11:37.356 --> 00:11:39.750
+when you you spoke to the mic.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2174-0
+00:11:40.310 --> 00:11:43.775
+So for that, is there any
+implication like the follow up
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2158-0
+00:11:40.480 --> 00:11:40.740
+Right.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2174-1
+00:11:43.775 --> 00:11:44.930
+questions for that?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2190-0
+00:11:46.140 --> 00:11:49.960
+Isn't that will it get affected
+because of the misspelling?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2181-0
+00:11:47.180 --> 00:11:47.330
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2187-0
+00:11:50.910 --> 00:11:51.320
+It is.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2201-0
+00:11:51.330 --> 00:11:54.860
+It is because of the the VDI
+environment.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2225-0
+00:11:54.870 --> 00:11:58.757
+If the same see I'm in, I'm
+using my own laptop and within
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2225-1
+00:11:58.757 --> 00:12:01.920
+that laptop I logged into
+Novartis environment.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2251-0
+00:12:01.930 --> 00:12:06.472
+But if if I I spell it correctly
+within with the I mean outside
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2251-1
+00:12:06.472 --> 00:12:09.240
+within what is in the document,
+right?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2261-0
+00:12:09.430 --> 00:12:12.000
+This without the VDI then it
+works fine for us.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2263-0
+00:12:12.010 --> 00:12:12.500
+I have.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2271-0
+00:12:12.510 --> 00:12:15.060
+We have already tested all these
+capabilities.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2274-0
+00:12:16.580 --> 00:12:17.510
+OK, alright.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2279-0
+00:12:17.560 --> 00:12:19.030
+And then expression is.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2298-0
+00:12:19.440 --> 00:12:24.500
+Now let's say you know I engage
+in and conversation with your
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2298-1
+00:12:24.500 --> 00:12:24.990
+agent.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2319-0
+00:12:25.380 --> 00:12:29.489
+Now at the end of the
+conversation, how you know how
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2303-0
+00:12:25.650 --> 00:12:25.880
+Umm.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2319-1
+00:12:29.489 --> 00:12:32.280
+good that conversation quality
+was?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2342-0
+00:12:32.290 --> 00:12:36.957
+Like you know, I mean how happy
+the doctor uh is with the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2342-1
+00:12:36.957 --> 00:12:39.130
+answers that I will giving.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2352-0
+00:12:39.180 --> 00:12:42.620
+So is there any sort of metrics
+that we track there?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2383-0
+00:12:44.350 --> 00:12:49.716
+We we were supposed to have that
+as after the POC if it's moving
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2383-1
+00:12:49.716 --> 00:12:54.669
+to production, so the feedback
+mechanism is not enabled for
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2383-2
+00:12:54.669 --> 00:12:55.660
+Supercharge.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2404-0
+00:12:56.450 --> 00:13:01.245
+So we were supposed to have that
+as we it is not part of the POC
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2404-1
+00:13:01.245 --> 00:13:02.720
+for us to be honest.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2424-0
+00:13:02.730 --> 00:13:06.623
+So we did not do that, but we'll
+be able to do, if at all it is
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2424-1
+00:13:06.623 --> 00:13:07.900
+moving to production.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2429-0
+00:13:10.190 --> 00:13:10.860
+Alright.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2443-0
+00:13:11.420 --> 00:13:15.013
+And and for the response is that
+it is generating like the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2443-1
+00:13:15.013 --> 00:13:15.500
+replies.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2453-0
+00:13:15.510 --> 00:13:19.830
+Use any few short prompts or
+something, or how is it?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2468-0
+00:13:22.790 --> 00:13:24.690
+Sorry I did not catch the
+question properly.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2469-0
+00:13:24.820 --> 00:13:25.230
+No.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2473-0
+00:13:25.240 --> 00:13:26.750
+So it is.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2481-0
+00:13:26.820 --> 00:13:28.730
+It is a leading the response
+right?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2541-0
+00:13:28.740 --> 00:13:33.551
+I would like to know more about
+this in the PC and all right, so
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2499-0
+00:13:33.240 --> 00:13:33.460
+Umm.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2541-1
+00:13:33.551 --> 00:13:38.066
+for that I mean do you have any
+underlying document that you
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2541-2
+00:13:38.066 --> 00:13:42.211
+have already put in place using
+any retrieval augmented
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2541-3
+00:13:42.211 --> 00:13:46.873
+generation mechanism or is it
+like a you know you are using as
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2526-0
+00:13:43.070 --> 00:13:43.290
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2541-4
+00:13:46.873 --> 00:13:49.020
+some sort of feature prompts?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2564-0
+00:13:50.480 --> 00:13:55.001
+The Workspace Nissan is where
+all the different document for
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2553-0
+00:13:53.930 --> 00:13:54.130
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2564-1
+00:13:55.001 --> 00:13:57.670
+this Workspace has been
+maintained.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2602-0
+00:13:57.680 --> 00:14:01.971
+If you can click on the
+workspace, OK and so you know we
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2602-1
+00:14:01.971 --> 00:14:06.412
+do to make it more streamline
+and for the simpler use test
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2602-2
+00:14:06.412 --> 00:14:09.950
+testing we just create three
+works with Alley.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2619-0
+00:14:09.960 --> 00:14:12.962
+We still have, you know, 1520
+involved right for each
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2619-1
+00:14:12.962 --> 00:14:14.630
+different drugs by the region.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2628-0
+00:14:14.750 --> 00:14:16.690
+Now we have only three
+Workspace.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2662-0
+00:14:16.920 --> 00:14:20.438
+Is a global where we can do the
+testing for Ennis then and we
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2662-1
+00:14:20.438 --> 00:14:23.900
+have this tree document uploaded
+related to Presenter Dirts.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2719-0
+00:14:24.450 --> 00:14:27.697
+Then we have other tools, one
+for Japan and one for China
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2719-1
+00:14:27.697 --> 00:14:31.223
+locations, and the based on the
+ability of the filled, regroup
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2719-2
+00:14:31.223 --> 00:14:34.638
+and participate the you know
+testing and who have experience
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2693-0
+00:14:31.270 --> 00:14:31.470
+That's.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2719-3
+00:14:34.638 --> 00:14:38.052
+or expertise on that particular
+drug dose only we bought the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2719-4
+00:14:38.052 --> 00:14:39.340
+document and upload it.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2754-0
+00:14:39.350 --> 00:14:43.680
+So all these you know, prompting
+the drug of efficacies, then
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2754-1
+00:14:43.680 --> 00:14:47.731
+objection handling all the
+responses are specific to this
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2754-2
+00:14:47.731 --> 00:14:51.922
+document that is being uploaded
+and in those particular box
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2754-3
+00:14:51.922 --> 00:14:52.760
+businessman.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2758-0
+00:14:54.520 --> 00:14:55.020
+OK, OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2776-0
+00:14:55.030 --> 00:15:00.655
+And so these these documents are
+details, the efficacy parameters
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2776-1
+00:15:00.655 --> 00:15:02.700
+and all inside it or or.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2784-0
+00:15:01.120 --> 00:15:04.850
+Umm. Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2787-0
+00:15:04.600 --> 00:15:05.280
+Yeah. Yes.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2795-0
+00:15:04.860 --> 00:15:09.370
+So yeah, those details are
+available in those documents.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2797-0
+00:15:09.380 --> 00:15:09.670
+OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2818-0
+00:15:09.680 --> 00:15:13.817
+And even the I don't still this
+thing or the when we are showing
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2818-1
+00:15:13.817 --> 00:15:15.090
+the prompt response.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2838-0
+00:15:15.100 --> 00:15:19.023
+Also we give that reference from
+where this you know you know the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2838-1
+00:15:19.023 --> 00:15:21.460
+this where the response is
+getting from.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2859-0
+00:15:23.780 --> 00:15:27.400
+Those, I mean the section you
+mean to say with section.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2868-0
+00:15:26.630 --> 00:15:30.340
+Not that they section no, the
+section is not implemented yet.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2929-0
+00:15:30.510 --> 00:15:34.081
+You know, just to make sure that
+people, the POC scope we just
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2929-1
+00:15:34.081 --> 00:15:37.823
+mentioned that can you go to the
+prom again, it wouldn't and just
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2929-2
+00:15:37.823 --> 00:15:41.224
+ask those questions then you
+know I don't have that section
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2929-3
+00:15:41.224 --> 00:15:44.342
+not the section but the
+reference the document is just
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2915-0
+00:15:41.760 --> 00:15:41.960
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2929-4
+00:15:44.342 --> 00:15:47.120
+yeah just click any apps or any
+questions. Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2975-0
+00:15:49.260 --> 00:15:52.942
+Yes, so here at the end, we are
+just showing the PDF name or the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2975-1
+00:15:52.942 --> 00:15:56.341
+document name for now and also
+when you hover over that you
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2955-0
+00:15:53.980 --> 00:15:54.120
+You.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2975-2
+00:15:56.341 --> 00:15:59.853
+will see a small section of the
+from where the information is
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2973-0
+00:15:58.000 --> 00:15:58.340
+Umm.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2975-3
+00:15:59.853 --> 00:16:00.420
+extracted.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2995-0
+00:16:02.230 --> 00:16:06.251
+You know, I mean the standard
+change it gives the reference of
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/2995-1
+00:16:06.251 --> 00:16:07.400
+the source, right?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3003-0
+00:16:07.150 --> 00:16:09.480
+Umm, right, right.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3001-0
+00:16:07.410 --> 00:16:08.600
+So that kind of source.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3021-0
+00:16:11.270 --> 00:16:14.487
+So if you hover over certain
+section that you can see just
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3021-1
+00:16:14.487 --> 00:16:15.360
+mouse over yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3025-0
+00:16:19.390 --> 00:16:19.640
+OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3051-0
+00:16:20.620 --> 00:16:25.056
+And now moving to the calendar,
+I want this so just go to the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3051-1
+00:16:25.056 --> 00:16:25.700
+calendar.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3049-0
+00:16:25.480 --> 00:16:26.380
+Here, Linda.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3054-0
+00:16:26.850 --> 00:16:27.100
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3061-0
+00:16:27.110 --> 00:16:30.380
+Linda is just a placeholder for
+now.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3071-0
+00:16:30.390 --> 00:16:33.050
+We don't have any specific
+features or function.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3075-0
+00:16:33.640 --> 00:16:34.080
+No.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3081-0
+00:16:34.320 --> 00:16:36.770
+What we envision is tomorrow.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3122-0
+00:16:36.780 --> 00:16:40.612
+Next, you know that can In Sync
+with the user Ms Outlook
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3122-1
+00:16:40.612 --> 00:16:44.848
+calendar now, so that you know
+they have a one single place of
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3107-0
+00:16:41.790 --> 00:16:42.490
+Yeah, exactly.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3122-2
+00:16:44.848 --> 00:16:47.470
+you know their events being sync
+here.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3131-0
+00:16:47.760 --> 00:16:51.470
+But this is just for the user
+experience.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3150-0
+00:16:51.480 --> 00:16:53.665
+What we have want to show the
+business is saying then install
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3150-1
+00:16:53.665 --> 00:16:54.440
+going through outlook.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3155-0
+00:16:54.450 --> 00:16:55.230
+You can come here.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3175-0
+00:16:55.240 --> 00:16:59.550
+You can see all upcoming events
+which we have booked or you know
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3175-1
+00:16:59.550 --> 00:17:00.810
+reserve forbid ICP.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3183-0
+00:17:01.080 --> 00:17:03.480
+Then you know you can once you
+have it.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3194-0
+00:17:03.750 --> 00:17:06.430
+What did particular, you know,
+events or calendar?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3213-0
+00:17:06.440 --> 00:17:09.974
+You can just get Supercharge by
+US training themselves on those
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3213-1
+00:17:09.974 --> 00:17:11.630
+particular drugs as questions.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3224-0
+00:17:11.640 --> 00:17:13.670
+And you know those kind of the
+field, there's one.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3254-0
+00:17:13.940 --> 00:17:17.072
+So there is what we put the this
+landing page, but at the moment
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3254-1
+00:17:17.072 --> 00:17:19.000
+it doesn't have any feature
+except for.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3272-0
+00:17:19.010 --> 00:17:21.626
+You can just add events and see
+that you know event is captured
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3272-1
+00:17:21.626 --> 00:17:21.830
+here.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3273-0
+00:17:22.720 --> 00:17:23.510
+Umm yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3290-0
+00:17:23.520 --> 00:17:26.469
+So my question was around like
+does it have any outlook
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3290-1
+00:17:26.469 --> 00:17:27.470
+integration or not?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3303-0
+00:17:27.260 --> 00:17:29.530
+No, not at the moment you send
+you, yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3301-0
+00:17:27.520 --> 00:17:28.350
+So yeah, but.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3306-0
+00:17:30.900 --> 00:17:31.850
+OK. OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3311-0
+00:17:31.860 --> 00:17:32.310
+Thank you.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3326-0
+00:17:32.180 --> 00:17:34.190
+You Yep.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3319-0
+00:17:32.320 --> 00:17:33.000
+Thanks a lot guys.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3321-0
+00:17:32.350 --> 00:17:34.670
+And thank you.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3342-0
+00:17:34.680 --> 00:17:39.410
+So in the interest of time, I'll
+hand over to a Subramanian,.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3350-0
+00:17:37.940 --> 00:17:42.270
+Shubham thanks Ruthran and Suraj
+Shubham.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3344-0
+00:17:40.020 --> 00:17:40.210
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3354-0
+00:17:41.810 --> 00:17:42.190
+Thank you.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3359-0
+00:17:42.280 --> 00:17:43.540
+Can you take over for Sam?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3360-0
+00:17:44.460 --> 00:17:44.930
+Sure, sure.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3364-0
+00:17:44.940 --> 00:17:46.050
+Thanks, Lavanya.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3373-0
+00:17:46.980 --> 00:17:49.380
+So let me just share my screen.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3376-0
+00:17:54.220 --> 00:17:54.550
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3399-0
+00:17:54.560 --> 00:17:59.607
+So Sam is basically is there to
+help in the hiring process and
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3399-1
+00:17:59.607 --> 00:18:01.370
+the screening process.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3421-0
+00:18:01.720 --> 00:18:07.624
+And here we are utilizing Jenny
+I capability and text to voice
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3421-1
+00:18:07.624 --> 00:18:12.310
+and voice to text capabilities
+of Azure services.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3446-0
+00:18:12.500 --> 00:18:16.000
+So I'll just talk about some of
+the sequence diagrams that we
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3446-1
+00:18:16.000 --> 00:18:19.330
+have in place so that we can
+better understand the system.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3448-0
+00:18:21.140 --> 00:18:21.730
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3472-0
+00:18:21.780 --> 00:18:25.832
+So yeah, this is the first flow
+where let's just say there are
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3472-1
+00:18:25.832 --> 00:18:27.890
+basically 2 users in the system.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3495-0
+00:18:27.900 --> 00:18:32.280
+There is A1 Interviewer and
+there is one Interviewee OK and
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3495-1
+00:18:32.280 --> 00:18:36.150
+as a Interviewer I can just go
+and upload my resume.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3500-0
+00:18:36.690 --> 00:18:38.750
+OK, so if you see.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3512-0
+00:18:40.710 --> 00:18:43.120
+So yeah, let's just say user
+comes and uploads.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3518-0
+00:18:43.130 --> 00:18:43.920
+It's resume.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3547-0
+00:18:43.930 --> 00:18:47.276
+So what we are doing, we are
+keeping all the information and
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3547-1
+00:18:47.276 --> 00:18:50.897
+related to the resume and we are
+getting the contacts out of that
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3547-2
+00:18:50.897 --> 00:18:51.720
+particular PDF.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3579-0
+00:18:51.770 --> 00:18:55.981
+We are saving that into our
+database and at that point in
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3579-1
+00:18:55.981 --> 00:18:59.974
+time basically that particular
+context will be used in
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3579-2
+00:18:59.974 --> 00:19:03.750
+subsequent further calls for the
+interview session.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3615-0
+00:19:04.040 --> 00:19:09.110
+So it is very basic flow where
+we are just collecting that
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3615-1
+00:19:09.110 --> 00:19:14.351
+assume information OK if we go
+to the next floor that is the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3615-2
+00:19:14.351 --> 00:19:18.390
+main flow where actual interview
+is happening.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3619-0
+00:19:18.720 --> 00:19:19.710
+So if you see.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3625-0
+00:19:22.860 --> 00:19:23.330
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3633-0
+00:19:23.420 --> 00:19:26.860
+So candidate needs to provide
+one particular resume ID.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3636-0
+00:19:27.000 --> 00:19:28.090
+Maybe what?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3661-0
+00:19:28.540 --> 00:19:33.001
+He or she already uploaded in
+the previous screen, and once
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3661-1
+00:19:33.001 --> 00:19:36.050
+that is there, there is one you
+can say.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3681-0
+00:19:36.060 --> 00:19:39.637
+The API layer is there and we
+will be getting our storing all
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3681-1
+00:19:39.637 --> 00:19:41.310
+the chat history information.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3694-0
+00:19:41.320 --> 00:19:44.826
+So for the first interaction,
+definitely there wouldn't be any
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3694-1
+00:19:44.826 --> 00:19:45.550
+chat history.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3723-0
+00:19:45.720 --> 00:19:49.454
+So for the subsequent call, we
+will be fetching that chat
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3723-1
+00:19:49.454 --> 00:19:53.188
+history as well so that we can
+prompt or provide so those
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3723-2
+00:19:53.188 --> 00:19:54.540
+responses to the LLM.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3756-0
+00:19:54.890 --> 00:20:00.088
+And yeah, once once we have the
+context we have, let's just say
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3756-1
+00:20:00.088 --> 00:20:05.125
+some question from the candidate
+side and we would be sending
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3756-2
+00:20:05.125 --> 00:20:08.130
+these information to our LLM
+system.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3771-0
+00:20:08.140 --> 00:20:12.070
+So right now we are using prompt
+flow for all our endpoints.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3789-0
+00:20:12.520 --> 00:20:15.951
+So once we send these
+information to prompt flow,
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3789-1
+00:20:15.951 --> 00:20:19.520
+prompt flow will be providing us
+the response as a.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3815-0
+00:20:21.200 --> 00:20:24.401
+Interviewer so they would be
+asking a question and let's just
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3815-1
+00:20:24.401 --> 00:20:26.570
+say as a candidate how we are
+responding.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3834-0
+00:20:26.580 --> 00:20:29.983
+So those interactions would be
+happening through our prompt
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3834-1
+00:20:29.983 --> 00:20:33.216
+flow and those interactions
+would be happening through a
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3834-2
+00:20:33.216 --> 00:20:33.500
+text.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3847-0
+00:20:33.750 --> 00:20:37.900
+So we have one particular Azure
+services as well in place.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3877-0
+00:20:37.910 --> 00:20:41.464
+So it would be converting text
+to speech and speech speech to
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3877-1
+00:20:41.464 --> 00:20:44.960
+text and all the interactions
+that we would be seeing on the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3877-2
+00:20:44.960 --> 00:20:47.310
+screen would be happening
+through audio.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3889-0
+00:20:48.030 --> 00:20:50.220
+So this is this is the main
+Interviewer.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3899-0
+00:20:50.230 --> 00:20:54.096
+Your Interviewee interaction,
+where the interview is actually
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3899-1
+00:20:54.096 --> 00:20:54.720
+happening.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3919-0
+00:20:54.970 --> 00:20:59.207
+Apart from that, we have one
+more flow where we are seeing
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3919-1
+00:20:59.207 --> 00:21:02.080
+that it is a Interviewer flow
+just one.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3950-0
+00:21:04.690 --> 00:21:09.127
+Yeah, this is the last flow
+where let's just say as a
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3950-1
+00:21:09.127 --> 00:21:13.974
+Interviewer, I want to maybe
+know what all questions I can
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3950-2
+00:21:13.974 --> 00:21:15.700
+ask from a candidate.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3993-0
+00:21:15.790 --> 00:21:20.057
+So here I can just upload a JD
+job description and based on
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3993-1
+00:21:20.057 --> 00:21:24.182
+that we will be just extracting
+information from that and
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3993-2
+00:21:24.182 --> 00:21:28.662
+getting the context and we will
+just send those information to
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/3993-3
+00:21:28.662 --> 00:21:29.800
+our prompt flow.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4027-0
+00:21:30.170 --> 00:21:34.856
+There would be a like apart from
+this context we will be sending
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4027-1
+00:21:34.856 --> 00:21:39.326
+a prompt and based on that it
+the system will provide us with
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4027-2
+00:21:39.326 --> 00:21:41.850
+easy, moderate and hard
+questions.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4038-0
+00:21:42.000 --> 00:21:45.300
+So yeah, that's about all the
+flows that we have, so.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4058-0
+00:21:47.140 --> 00:21:51.406
+I can give you a UI demo of the
+whole flows that we talked
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4058-1
+00:21:51.406 --> 00:21:51.840
+about.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4068-0
+00:21:54.960 --> 00:21:55.610
+Thank you, Siva.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4071-0
+00:21:55.240 --> 00:21:56.450
+Over to you say, yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4072-0
+00:21:57.150 --> 00:21:57.290
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4076-0
+00:21:58.000 --> 00:21:59.010
+Let me share my screen.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4086-0
+00:22:02.840 --> 00:22:04.210
+Let me know once my screen is
+visible.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4092-0
+00:22:12.970 --> 00:22:13.600
+Yeah, this is.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4146-0
+00:22:14.590 --> 00:22:18.965
+Yeah, this is the initial screen
+when we can, when we came into
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4146-1
+00:22:18.965 --> 00:22:22.656
+the application, some
+application we will be seeing a
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4146-2
+00:22:22.656 --> 00:22:26.689
+button called here like when
+user clicks on the click here
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4146-3
+00:22:26.689 --> 00:22:30.859
+button we will be showcasing a
+dialogue box by having it two
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4146-4
+00:22:30.859 --> 00:22:33.730
+options called interviewer and
+interview.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4171-0
+00:22:34.460 --> 00:22:38.879
+If user uploads and interview by
+uploading a job description,
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4171-1
+00:22:38.879 --> 00:22:42.514
+we'll be getting the
+questionnaires as uh, Shubham
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4171-2
+00:22:42.514 --> 00:22:43.940
+Express just before.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4181-0
+00:22:44.720 --> 00:22:47.440
+Once we upload any job
+description of that user.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4191-0
+00:22:50.250 --> 00:22:53.490
+We'll be fetching the questions
+for that job description.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4201-0
+00:22:58.280 --> 00:22:59.680
+You can see the response in the
+bottom.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4205-0
+00:23:03.420 --> 00:23:03.770
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4231-0
+00:23:03.780 --> 00:23:07.699
+And in the back end here we are
+using prompt flow to fetch the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4231-1
+00:23:07.699 --> 00:23:11.120
+questions from the context
+within the job description.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4233-0
+00:23:11.830 --> 00:23:12.980
+These are the questions.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4243-0
+00:23:13.430 --> 00:23:15.680
+Easy questions and moderate,
+difficult and hard.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4246-0
+00:23:15.690 --> 00:23:16.430
+Questions three.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4265-0
+00:23:16.860 --> 00:23:21.931
+Yeah, types of questions, we
+will be displaying for this user
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4276-0
+00:23:21.830 --> 00:23:25.467
+And sure, Shubham and Ruthran
+like you guys have not
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4265-1
+00:23:21.931 --> 00:23:22.340
+once.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4276-1
+00:23:25.467 --> 00:23:27.320
+implemented streaming here.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4281-0
+00:23:29.590 --> 00:23:29.960
+No.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4286-0
+00:23:30.030 --> 00:23:30.980
+So not yet.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4302-0
+00:23:31.090 --> 00:23:35.857
+We haven't implemented that, but
+yeah, we we can do that in
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4302-1
+00:23:35.857 --> 00:23:36.970
+future, so we.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4303-0
+00:23:36.460 --> 00:23:36.870
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4305-0
+00:23:36.940 --> 00:23:37.340
+Evening.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4314-0
+00:23:38.600 --> 00:23:40.910
+Do it as a best practice for
+whole thing.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4329-0
+00:23:41.220 --> 00:23:44.561
+You know, maybe this will come
+from Satya, but I'm just my
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4329-1
+00:23:44.561 --> 00:23:45.410
+suggestion, OK?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4353-0
+00:23:45.740 --> 00:23:49.400
+Because the you know the weight
+time is going to be, everything
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4337-0
+00:23:46.310 --> 00:23:46.550
+Umm.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4353-1
+00:23:49.400 --> 00:23:52.660
+is going to the wait time, right
+response time, correct?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4381-0
+00:23:52.780 --> 00:23:55.910
+So for every chat interaction,
+if you implement it, I think
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4381-1
+00:23:55.910 --> 00:23:59.197
+there is going to benefit, you
+know, and it become a practice,
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4381-2
+00:23:59.197 --> 00:23:59.510
+right?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4423-0
+00:23:59.520 --> 00:24:02.524
+So for anything that we do or
+will forward, so then we don't
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4423-1
+00:24:02.524 --> 00:24:05.578
+need to axe or remind you guys
+saying that this is what needs
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4405-0
+00:24:02.550 --> 00:24:03.300
+Yes, into.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4423-2
+00:24:05.578 --> 00:24:07.450
+to be done in support of this,
+right?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4464-0
+00:24:08.060 --> 00:24:11.687
+So because there is one of the
+challenges we face, remember in
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4449-0
+00:24:11.370 --> 00:24:12.290
+Yes, yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4464-1
+00:24:11.687 --> 00:24:13.760
+terms of performance, OK,
+continue.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4451-0
+00:24:12.250 --> 00:24:12.480
+Umm.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4477-0
+00:24:13.280 --> 00:24:17.400
+We were asked to migrate from
+Langchain to prompt flow and we
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4477-1
+00:24:17.400 --> 00:24:21.320
+got very limited time, so this
+is just an analysis of Sam.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4474-0
+00:24:19.330 --> 00:24:19.570
+Umm.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4490-0
+00:24:22.110 --> 00:24:25.020
+OK, if you're planning to do it,
+fine.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4488-0
+00:24:23.130 --> 00:24:23.270
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4502-0
+00:24:25.030 --> 00:24:26.510
+If not, then you know, just
+think about it.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4505-0
+00:24:25.830 --> 00:24:28.260
+Yeah, sure, yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4512-0
+00:24:29.970 --> 00:24:33.090
+Yeah, but it's just you.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4521-0
+00:24:34.100 --> 00:24:39.660
+Please just like you know really
+to so this.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4524-0
+00:24:40.450 --> 00:24:42.460
+That you love.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4529-0
+00:24:52.310 --> 00:24:54.520
+So upgrading.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4546-0
+00:24:54.730 --> 00:24:57.190
+Yeah, just one.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4535-0
+00:24:56.760 --> 00:24:57.050
+Yes.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4542-0
+00:24:57.060 --> 00:24:59.220
+Hi, your voice is sorry.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4552-0
+00:24:59.230 --> 00:25:00.680
+Your voice is breaking very
+badly.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4551-0
+00:24:59.640 --> 00:24:59.860
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4553-0
+00:24:59.730 --> 00:25:01.420
+Because but.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4564-0
+00:25:03.160 --> 00:25:03.610
+Hi.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4567-0
+00:25:03.880 --> 00:25:04.660
+So we can't hear you.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4594-0
+00:25:04.150 --> 00:25:08.200
+The uh, that's true.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4574-0
+00:25:06.230 --> 00:25:07.180
+We can't hear you, Sai.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4586-0
+00:25:07.190 --> 00:25:08.490
+Your voice is breaking very
+badly.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4599-0
+00:25:10.020 --> 00:25:11.120
+I think you can't hear us.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4602-0
+00:25:10.600 --> 00:25:12.990
+The. Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4604-0
+00:25:11.730 --> 00:25:13.050
+Yes, I had ping him.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4611-0
+00:25:13.180 --> 00:25:20.230
+Yeah, having OK, it was called
+come later.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4617-0
+00:25:26.660 --> 00:25:27.010
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4631-0
+00:25:27.020 --> 00:25:31.763
+Let me maybe cycle are you
+around or maybe let me share my
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4631-1
+00:25:31.763 --> 00:25:33.130
+screen something.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4639-0
+00:25:52.020 --> 00:25:52.630
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4659-0
+00:25:52.720 --> 00:25:59.505
+So I think, yeah, the interview
+we flow was already shown by
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4659-1
+00:25:59.505 --> 00:25:59.950
+Sai.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4668-0
+00:26:00.080 --> 00:26:02.350
+So we can discuss about the
+Interviewer flow.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4677-0
+00:26:02.360 --> 00:26:03.780
+So basically here.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4680-0
+00:26:03.670 --> 00:26:06.260
+I Shubham I think Interviewer
+was discussed.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4695-0
+00:26:06.270 --> 00:26:07.280
+We need to go to Interviewee.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4688-0
+00:26:06.830 --> 00:26:07.280
+OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4690-0
+00:26:07.290 --> 00:26:07.700
+OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4693-0
+00:26:07.790 --> 00:26:08.120
+OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4696-0
+00:26:08.130 --> 00:26:08.540
+OK, sure.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4699-0
+00:26:08.550 --> 00:26:09.040
+OK, sure.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4706-0
+00:26:08.980 --> 00:26:09.190
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4702-0
+00:26:09.050 --> 00:26:09.660
+Bye bye.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4712-0
+00:26:09.930 --> 00:26:13.290
+So yeah, we can just upload a
+resume here.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4716-0
+00:26:15.720 --> 00:26:17.980
+Yeah, I have.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4748-0
+00:26:21.040 --> 00:26:25.866
+OK, so basically once the resume
+is uploaded good, we are just
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4748-1
+00:26:25.866 --> 00:26:30.386
+giving one button to in start
+the interview based on those
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4748-2
+00:26:30.386 --> 00:26:33.910
+particular resume that the user
+has approved.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4753-0
+00:26:39.560 --> 00:26:40.050
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4757-0
+00:26:40.100 --> 00:26:42.980
+So here as as I.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4778-0
+00:26:46.080 --> 00:26:51.546
+OK, so right now the system is
+actually speaking whatever tax
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4778-1
+00:26:51.546 --> 00:26:53.750
+you guys are seeing here.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4802-0
+00:26:53.840 --> 00:26:57.115
+So I think it might not be
+audible to you guys, but the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4802-1
+00:26:57.115 --> 00:27:00.273
+system will be automatically
+saying that text that is
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4802-2
+00:27:00.273 --> 00:27:01.150
+mentioned here.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4819-0
+00:27:01.220 --> 00:27:04.443
+So all the interaction that on
+this screen is happening is
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4819-1
+00:27:04.443 --> 00:27:05.590
+through voice itself.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4842-0
+00:27:05.830 --> 00:27:09.824
+And here if you see the name
+that is mentioned here, it is
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4842-1
+00:27:09.824 --> 00:27:13.750
+taken from the context that was
+uploaded in there itself.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4844-0
+00:27:14.040 --> 00:27:14.550
+OK so.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4849-0
+00:27:20.940 --> 00:27:21.230
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4855-0
+00:27:21.320 --> 00:27:24.140
+I I'm a software developer.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4861-0
+00:27:24.720 --> 00:27:26.450
+How I can assist you today?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4884-0
+00:27:41.830 --> 00:27:45.834
+Yes, so here this is the part
+where it candidate can give the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4884-1
+00:27:45.834 --> 00:27:46.480
+interview.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4969-0
+00:27:47.230 --> 00:27:51.444
+So like LLM is asking Shubham to
+introduce himself and give give
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4969-1
+00:27:51.444 --> 00:27:55.334
+background so Shubham can use
+the audio functionality to do
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4969-2
+00:27:55.334 --> 00:27:59.030
+that Suman can you please like
+give a small interaction?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4935-0
+00:28:00.060 --> 00:28:03.390
+Search up the high Sam.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4941-0
+00:28:03.400 --> 00:28:04.580
+My name is Shiva moja.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4950-0
+00:28:04.590 --> 00:28:07.740
+I'm here to give an interview
+today.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4958-0
+00:28:08.330 --> 00:28:10.340
+What all the questions I should
+be expecting?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4968-0
+00:28:23.630 --> 00:28:26.400
+OK, not sure like me.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4973-0
+00:28:31.470 --> 00:28:31.840
+Super.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5000-0
+00:28:31.850 --> 00:28:37.209
+Probably introduce yourself as a
+the candidate, not yourself,
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/4987-0
+00:28:36.080 --> 00:28:36.330
+OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5000-1
+00:28:37.209 --> 00:28:39.370
+because it's not able to.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5001-0
+00:28:37.610 --> 00:28:41.090
+Umm, no, I think some audio
+issues there, but yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5020-0
+00:29:21.090 --> 00:29:26.445
+Hi I'm a software developer with
+seven years of experience in
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5020-1
+00:29:26.445 --> 00:29:27.050
+Python.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5028-0
+00:29:51.130 --> 00:29:51.350
+OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5034-0
+00:30:06.890 --> 00:30:07.550
+Should don't.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5046-0
+00:30:07.560 --> 00:30:09.520
+Don't wait for the audio to play
+just to go ahead.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5059-0
+00:30:10.850 --> 00:30:17.628
+OK currently I'm working on a
+rack component which is using
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5059-1
+00:30:17.628 --> 00:30:18.080
+LLM.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5072-0
+00:30:28.160 --> 00:30:31.120
+Yeah, actually like Shubham
+stopped in the middle.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5080-0
+00:30:31.130 --> 00:30:32.790
+So there is a bit of issue.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5104-0
+00:30:33.160 --> 00:30:36.836
+So basically the idea in this
+screen is like a candidate can
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5104-1
+00:30:36.836 --> 00:30:40.210
+come and keep on answering the
+questions which are LLM.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5115-0
+00:30:40.220 --> 00:30:42.470
+Has and once the interview gets
+completed.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5121-0
+00:30:43.000 --> 00:30:45.270
+Basically it will show a.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5135-0
+00:30:45.700 --> 00:30:49.030
+It will show some strength and
+weaknesses to the candidate.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5159-0
+00:30:49.540 --> 00:30:53.666
+Later on we can add more
+features or more metrics or to
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5140-0
+00:30:49.880 --> 00:30:50.200
+OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5159-1
+00:30:53.666 --> 00:30:57.423
+how the edge of how the
+candidate performed in the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5159-2
+00:30:57.423 --> 00:30:58.160
+interview.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5173-0
+00:30:58.750 --> 00:31:01.530
+And yeah, this is the main idea
+in this screen.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5180-0
+00:31:02.470 --> 00:31:02.800
+Better.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5195-0
+00:31:02.770 --> 00:31:03.770
+Yeah, just.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5187-0
+00:31:02.870 --> 00:31:04.660
+So maybe let me try it.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5196-0
+00:31:03.020 --> 00:31:04.440
+Just say conclude the interview.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5189-0
+00:31:04.780 --> 00:31:04.970
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5216-0
+00:31:04.980 --> 00:31:08.710
+Yeah, let me try to conclude
+that and the interview.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5204-0
+00:31:05.590 --> 00:31:05.860
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5215-0
+00:31:05.870 --> 00:31:07.920
+Just to conclude the interview
+and it'll conclude.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5229-0
+00:31:18.380 --> 00:31:20.920
+Yeah, it seems that your audio
+was misinformed.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5238-0
+00:31:20.930 --> 00:31:23.650
+So this session might be
+cancelled.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5250-0
+00:31:23.660 --> 00:31:26.940
+So yeah, maybe you can just end
+close the session, yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5249-0
+00:31:25.420 --> 00:31:25.600
+And.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5274-0
+00:31:37.610 --> 00:31:40.951
+You're gonna have to speak
+loudly, like otherwise it the IT
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5274-1
+00:31:40.951 --> 00:31:42.510
+was not recognizing my hope.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5275-0
+00:31:43.900 --> 00:31:44.450
+OK, OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5282-0
+00:31:44.460 --> 00:31:44.620
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5292-0
+00:31:44.630 --> 00:31:47.240
+I I think for some reason, yeah,
+it was not able to.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5300-0
+00:31:59.600 --> 00:32:01.340
+Hi I'm Shubham.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5306-0
+00:32:01.380 --> 00:32:04.300
+I have seven years of experience
+in Python.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5319-0
+00:32:32.870 --> 00:32:33.830
+Hmm, OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5336-0
+00:32:37.300 --> 00:32:39.560
+Uh, I think the resume is a
+fresh.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5337-0
+00:32:38.930 --> 00:32:41.170
+Can you please end the
+interview?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5342-0
+00:32:45.970 --> 00:32:46.240
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5372-0
+00:32:46.250 --> 00:32:49.858
+So what happened here is the the
+resume is fresher and you
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5372-1
+00:32:49.858 --> 00:32:52.120
+introduced as seven year
+experience.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5379-0
+00:32:50.300 --> 00:32:52.800
+Like right, that it direct
+correct.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5380-0
+00:32:52.130 --> 00:32:54.440
+So that's why it's causing the
+confusion.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5405-0
+00:33:04.800 --> 00:33:09.516
+So at the end it should provide
+a with a metric or in terms of
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5405-1
+00:33:09.516 --> 00:33:12.360
+the performance, how the
+performance.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5420-0
+00:33:25.440 --> 00:33:26.840
+OK so.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5433-0
+00:33:26.770 --> 00:33:31.786
+OK, since I don't go uh, since
+that audio interaction was, it
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5433-1
+00:33:31.786 --> 00:33:33.000
+didn't go well.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5457-0
+00:33:33.010 --> 00:33:35.659
+I think that's a feedback we
+got, but otherwise it would just
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5457-1
+00:33:35.659 --> 00:33:37.880
+show proper feedback saying how
+the interview went.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5460-0
+00:33:39.560 --> 00:33:40.200
+Correct, correct.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5462-0
+00:33:40.210 --> 00:33:40.590
+Correct.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5470-0
+00:33:40.590 --> 00:33:43.040
+Yeah, that was the all loving.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5503-0
+00:33:46.210 --> 00:33:50.401
+So when you say Feedback, you
+set extral back or like it gives
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5483-0
+00:33:46.420 --> 00:33:46.640
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5490-0
+00:33:48.140 --> 00:33:48.390
+Maybe.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5503-1
+00:33:50.401 --> 00:33:52.330
+some numerical score as well.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5512-0
+00:33:53.500 --> 00:33:55.920
+It's a textual Feedback
+numerical score.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5517-0
+00:33:55.930 --> 00:33:57.300
+We haven't got to that point
+yet.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5538-0
+00:34:00.070 --> 00:34:04.072
+And the guys are you using as
+your EA cells in the like no for
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5538-1
+00:34:04.072 --> 00:34:04.390
+this?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5553-0
+00:34:08.130 --> 00:34:10.040
+Sorry, can you please repeat the
+machine?
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5555-0
+00:34:10.530 --> 00:34:10.920
+No.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5561-0
+00:34:10.650 --> 00:34:11.480
+Yeah, she wanna settle.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5588-0
+00:34:10.930 --> 00:34:15.160
+Right now, right now we are not
+using Nissan I any age search
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5588-1
+00:34:15.160 --> 00:34:19.322
+because again we are directly
+taking the context from the CV
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5588-2
+00:34:19.322 --> 00:34:22.460
+itself and using that giving
+that to the LLM.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5604-0
+00:34:22.470 --> 00:34:26.561
+So we are not really using any
+doing any retrieval or or using
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5604-1
+00:34:26.561 --> 00:34:27.210
+AI search.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5609-0
+00:34:28.950 --> 00:34:30.080
+OK, OK, alright.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5623-0
+00:34:30.090 --> 00:34:33.110
+So it is based on that document
+only that is being uploaded.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5624-0
+00:34:34.210 --> 00:34:34.610
+Yeah.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5640-0
+00:34:34.620 --> 00:34:36.860
+Yeah, there is one and this V
+respectively.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5647-0
+00:34:36.870 --> 00:34:38.510
+Directly we are getting the
+context from there.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5649-0
+00:34:40.590 --> 00:34:40.890
+OK.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5665-0
+00:34:54.910 --> 00:34:57.750
+OK, I think we have crossed
+beyond the meeting timings.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5668-0
+00:34:59.470 --> 00:35:00.140
+Thanks team.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5689-0
+00:35:00.150 --> 00:35:05.373
+Thanks Ruthran, Shubham, Suraj
+and Sai Vibhor for your for the
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5689-1
+00:35:05.373 --> 00:35:08.690
+all the hard work and showing
+the demo.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5692-0
+00:35:09.510 --> 00:35:10.070
+Thank you all.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5710-0
+00:35:12.630 --> 00:35:15.010
+Thank you and have a great day,
+I.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5708-0
+00:35:12.660 --> 00:35:13.870
+Hey, thank you. Thanks.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5709-0
+00:35:13.030 --> 00:35:13.450
+Thank you.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5722-0
+00:35:15.580 --> 00:35:16.190
+Thank you. Bye.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5723-0
+00:35:15.970 --> 00:35:16.370
+Thank you.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5725-0
+00:35:16.090 --> 00:35:16.580
+Thanks everyone.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5730-0
+00:35:16.980 --> 00:35:17.170
+That.
+
+f97d9557-a17c-4bd8-aa1e-4debc3951ab0/5735-0
+00:35:19.100 --> 00:35:19.610
+Thanks.

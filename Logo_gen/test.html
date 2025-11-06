@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logo Generator Test</title>
+</head>
+<body>
+    <h1>Logo Generator Test</h1>
+    <button onclick="generateLogo()">Generate Logo</button>
+    <div id="result"></div>
+
+    <script>
+        async function generateLogo() {
+            const response = await fetch('http://127.0.0.1:8080/api/v1/generate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    brand_name: "TechCorp",
+                    style: "modern",
+                    color_scheme: "colorful",
+                    target_audience: "professionals",
+                    usage_context: "digital_primary",
+                    maintain_simplicity: true
+                })
+            });
+
+            const data = await response.json();
+            const resultDiv = document.getElementById('result');
+            
+            if (response.ok) {
+                resultDiv.innerHTML = `
+                    <h2>Generated Logo:</h2>
+                    <img src="${data.logo_url}" alt="Generated Logo" style="max-width: 500px"><br>
+                    <h3>Preview:</h3>
+                    <img src="${data.preview_url}" alt="Preview" style="max-width: 250px">
+                `;
+            } else {
+                resultDiv.innerHTML = `<p>Error: ${data.detail}</p>`;
+            }
+        }
+    </script>
+</body>
+</html> 
