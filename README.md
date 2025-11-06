@@ -19,6 +19,6 @@ Gen AI PoCs is a collection of Proof of Concept (PoC) projects demonstrating var
 - JavaScript
 - React
 
-### TODO
+### TODOs
 
 [] Updated deprecated / legacy code in mini apps

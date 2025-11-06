@@ -16,7 +16,7 @@ import {
 } from '@mui/material';
 import { Home } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 import logoGeneratorStyles from './LogoGenerator.style';
 import genaiContext from '../../Context/genai-context';
 

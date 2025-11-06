@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import html2pdf from 'html2pdf.js';
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 import { withStyles } from '@mui/styles';
 import { Grid, Typography, Button, TextField, Snackbar, ListItem, List, ListItemText, Alert, Tooltip } from "@mui/material";
 import { LoadingButton } from '@mui/lab';

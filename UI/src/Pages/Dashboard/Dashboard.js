@@ -5,7 +5,7 @@ import { withStyles } from '@mui/styles';
 import { useNavigate } from 'react-router-dom';
 import genaiContext from '../../Context/genai-context';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import Scrollbars from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 import pocLeftImage from '../../assets/pocLeftImage.svg'
 import pocRightImage from '../../assets/pocRightImage.svg'
 import dashboardUserImage from '../../assets/dashboardUserImage.svg'
