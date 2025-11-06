@@ -22,35 +22,42 @@ const HRPoliciesChatbot = () => {
   const [loading, setLoading] = useState(false);
   const [uploadStatus, setUploadStatus] = useState("");
   const [sessionId, setSessionId] = useState("");
+  const [error, setError] = useState(""); // Add error state
   const messagesEndRef = useRef(null);
 
   const baseUrl = process.env.REACT_APP_HR_CHATBOT_ENDPOINT;
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
+  // Add logging when component mounts
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+    console.log("HR Chatbot initialized with baseUrl:", baseUrl);
+  }, [baseUrl]);
 
+  // Modify session creation with more logging
   useEffect(() => {
     const createSession = async () => {
       try {
+        console.log("Creating session at:", `${baseUrl}/api/v1/session`);
         const res = await fetch(`${baseUrl}/api/v1/session`, {
           method: "POST",
         });
+        console.log("Session response status:", res.status);
+
         if (!res.ok) throw new Error("Failed to create session");
         const data = await res.json();
+        console.log("Session created successfully:", data);
         setSessionId(data.session_id);
       } catch (e) {
-        // keep UI usable even if session fails; retries will happen on next mount/refresh
-        // eslint-disable-next-line no-console
-        console.error("Error creating session:", e);
+        console.error("Error creating session:", {
+          error: e.message,
+          baseUrl,
+          endpoint: `${baseUrl}/api/v1/session`,
+        });
       }
     };
     if (baseUrl) {
       createSession();
+    } else {
+      console.error("Missing baseUrl for HR Chatbot");
     }
   }, [baseUrl]);
 
@@ -86,6 +93,24 @@ const HRPoliciesChatbot = () => {
   const handleSendStream = async () => {
     if (!input.trim() || !baseUrl) return;
 
+    console.log("Starting chat request with:", {
+      baseUrl,
+      sessionId,
+      endpoint: `${baseUrl}/api/v1/chat/stream`,
+      input,
+    });
+
+    // Reset error state
+    setError("");
+
+    // Log request details
+    console.log("Sending chat request:", {
+      sessionId,
+      message: input,
+      baseUrl,
+    });
+
+    // Add message to UI
     const userMessage = { role: "user", content: input };
     setMessages((prev) => [...prev, userMessage]);
     const currentInput = input;
@@ -93,41 +118,63 @@ const HRPoliciesChatbot = () => {
     setLoading(true);
 
     try {
+      if (!sessionId) {
+        console.error("No session ID available");
+        throw new Error("No session ID available. Please try refreshing the page.");
+      }
+
+      console.log("Sending request to:", `${baseUrl}/api/v1/chat/stream`);
       const response = await fetch(`${baseUrl}/api/v1/chat/stream`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ session_id: sessionId, message: currentInput }),
+        body: JSON.stringify({
+          session_id: sessionId,
+          message: currentInput,
+        }),
       });
 
-      if (!response.ok || !response.body) {
-        throw new Error("Failed to stream response");
+      console.log("Stream response:", {
+        status: response.status,
+        ok: response.ok,
+        statusText: response.statusText,
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("API Error:", {
+          status: response.status,
+          statusText: response.statusText,
+          error: errorText,
+        });
+        throw new Error(
+          `API Error: ${response.status} - ${errorText || response.statusText}`
+        );
       }
 
-      // Insert assistant placeholder message
-      let assistantIndex = -1;
-      setMessages((prev) => {
-        const next = [...prev, { role: "assistant", content: "" }];
-        assistantIndex = next.length - 1;
-        return next;
-      });
+      if (!response.body) {
+        throw new Error("Response stream not available");
+      }
+
+      // Add assistant message placeholder for UI
+      setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
 
       const reader = response.body.getReader();
       const decoder = new TextDecoder("utf-8");
       let buffer = "";
 
       const processChunk = (text) => {
-        buffer += text;
-        const parts = buffer.split("\n\n");
-        // keep last partial in buffer
-        buffer = parts.pop() ?? "";
-        for (const part of parts) {
-          const lines = part.split("\n");
-          for (const line of lines) {
-            const trimmed = line.trim();
-            if (!trimmed.startsWith("data:")) continue;
-            const payload = trimmed.slice(5).trim();
-            if (!payload) continue;
-            try {
+        try {
+          buffer += text;
+          const parts = buffer.split("\n\n");
+          buffer = parts.pop() ?? "";
+          for (const part of parts) {
+            const lines = part.split("\n");
+            for (const line of lines) {
+              const trimmed = line.trim();
+              if (!trimmed.startsWith("data:")) continue;
+              const payload = trimmed.slice(5).trim();
+              if (!payload) continue;
+
               const json = JSON.parse(payload);
               const delta = json?.content ?? "";
               if (delta) {
@@ -140,11 +187,11 @@ const HRPoliciesChatbot = () => {
                   return next;
                 });
               }
-            } catch (e) {
-              // eslint-disable-next-line no-console
-              console.warn("Bad SSE data:", payload);
             }
           }
+        } catch (e) {
+          console.error("Error processing stream chunk:", e);
+          throw e;
         }
       };
 
@@ -162,8 +209,22 @@ const HRPoliciesChatbot = () => {
         processChunk("\n\n");
       }
     } catch (err) {
-      // eslint-disable-next-line no-console
-      console.error("Streaming error:", err);
+      console.error("Chat error details:", {
+        message: err.message,
+        baseUrl,
+        sessionId,
+        input: currentInput,
+      });
+      setError(err.message || "Failed to get response. Please try again.");
+      // Add error message to chat
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "system",
+          content:
+            "⚠️ " + (err.message || "An error occurred while processing your request."),
+        },
+      ]);
     } finally {
       setLoading(false);
     }
@@ -174,6 +235,12 @@ const HRPoliciesChatbot = () => {
       <Typography variant="h4" gutterBottom>
         HR Policies Chatbot
       </Typography>
+
+      {error && (
+        <Typography color="error" sx={{ mb: 2 }}>
+          {error}
+        </Typography>
+      )}
 
       <FileUploadSection>
         <Button
