@@ -22,12 +22,12 @@ import {
   DialogContent,
   DialogTitle,
   IconButton,
-  Stack
+  Stack,
 } from "@mui/material";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 import genaiContext from "../../../Context/genai-context";
 
-const voices = ["alloy", "shimmer", "echo"]
+const voices = ["alloy", "shimmer", "echo"];
 
 const PPTUpload = () => {
   const [selectedLLM, setSelectedLLM] = useState("realtime-gpt");
@@ -38,14 +38,20 @@ const PPTUpload = () => {
   const [sessionId, setSessionId] = useState("");
   const [currentSlide, setCurrentSlide] = useState(1);
   const [generatingPDF, setGeneratingPDF] = useState(false);
-  const [totalslides, setTotalSlides] = useState()
+  const [totalslides, setTotalSlides] = useState();
   const [openPromptDialog, setOpenPromptDialog] = useState(false);
-  const [readingPPT, setReadingPPT] = useState(false)
-  const [selectedVoice, setSelectedVoice] = useState('alloy')
-  const [userPrompt, setUserPrompt] = useState("Your task is to answer questions asked by the user related to any of these slides. Keep conversations shorter and on point. Note strictly that you are a two-way conversational agent.");
-  const [systemPrompt, setSystemPrompt] = useState("Role: You are a conversational agent acting as an expert in presenting PowerPoint slides and answering questions about the presentation content. Your name is Saroja.");
-  
-  useEffect(() => { setHeading("Virtual Presenter"); }, [setHeading]);
+  const [readingPPT, setReadingPPT] = useState(false);
+  const [selectedVoice, setSelectedVoice] = useState("alloy");
+  const [userPrompt, setUserPrompt] = useState(
+    "Your task is to answer questions asked by the user related to any of these slides. Keep conversations shorter and on point. Note strictly that you are a two-way conversational agent.",
+  );
+  const [systemPrompt, setSystemPrompt] = useState(
+    "Role: You are a conversational agent acting as an expert in presenting PowerPoint slides and answering questions about the presentation content. Your name is Saroja.",
+  );
+
+  useEffect(() => {
+    setHeading("Virtual Presenter");
+  }, [setHeading]);
 
   const handleLLMChange = (e) => {
     setSelectedLLM(e.target.value);
@@ -55,9 +61,9 @@ const PPTUpload = () => {
     setSelectedSTT(e.target.value);
   };
 
-  const  handleVoiceChange = (e) => {
-    setSelectedVoice(e.target.value)
-  }
+  const handleVoiceChange = (e) => {
+    setSelectedVoice(e.target.value);
+  };
 
   const goToNextSlide = (val) => {
     setCurrentSlide(val);
@@ -70,69 +76,84 @@ const PPTUpload = () => {
     setUploadError("");
     setGeneratingPDF(true);
     let custom_prompts = {
-      "system_prompt": systemPrompt,
-      "user_prompt": userPrompt
-      
-    }
-const body={ formData,}
+      system_prompt: systemPrompt,
+      user_prompt: userPrompt,
+    };
+    const body = { formData };
 
-if(selectedLLM == 'gpt-4-o'){
-  try {  
-    const response = await axios.post(`${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT}/upload_and_initiate?llm_model=${selectedLLM}`,
-      formData,custom_prompts);
-    if (response.status !== 200) {
-      throw new Error(response.status >= 500
-        ? "Server error during file upload. Please try again later."
-        : "File upload error. Please check the file format and try again.");
-    }
+    if (selectedLLM == "gpt-4-o") {
+      try {
+        const response = await axios.post(
+          `${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT}/upload_and_initiate?llm_model=${selectedLLM}`,
+          formData,
+          custom_prompts,
+        );
+        if (response.status !== 200) {
+          throw new Error(
+            response.status >= 500
+              ? "Server error during file upload. Please try again later."
+              : "File upload error. Please check the file format and try again.",
+          );
+        }
 
-    const { session_id, pdf_content, total_slides } = response.data;
-    setSessionId(session_id);
-    setTotalSlides(total_slides)
-    const pdfBlob = new Blob([Uint8Array.from(atob(pdf_content), c => c.charCodeAt(0))], { type: 'application/pdf' });
-    const pdfUrl = URL.createObjectURL(pdfBlob);
-    setPdfFile(pdfUrl);
-    setGeneratingPDF(false);
-  } catch (error) {
-    console.error('File upload error:', error);
-    setUploadError(error.message);
-    setGeneratingPDF(false);
-  }
-}else{ 
-
-  try {  
-    const response = await axios.post(`${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT_REAL_API}/upload_ppt/`,
-      formData);
-    if (response.status !== 200) {
-      throw new Error(response.status >= 500
-        ? "Server error during file upload. Please try again later."
-        : "File upload error. Please check the file format and try again.");
-    }else{
-      const { session_id, pdf_content,file_name, total_slides } = response.data;
-      setSessionId(session_id);
-        setTotalSlides(total_slides)
-        const pdfBlob = new Blob([Uint8Array.from(atob(pdf_content), c => c.charCodeAt(0))], { type: 'application/pdf' });
+        const { session_id, pdf_content, total_slides } = response.data;
+        setSessionId(session_id);
+        setTotalSlides(total_slides);
+        const pdfBlob = new Blob(
+          [Uint8Array.from(atob(pdf_content), (c) => c.charCodeAt(0))],
+          { type: "application/pdf" },
+        );
         const pdfUrl = URL.createObjectURL(pdfBlob);
         setPdfFile(pdfUrl);
-        setReadingPPT(true)
-      const res = await axios.post(`${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT_REAL_API}/explain_ppt/?file_name=${file_name}&session_id=${session_id}&voice=${selectedVoice}`)
-      if(res.status == 200){
-        setReadingPPT(false)
-      }else{
-        throw new Error(res.status >= 500
-          ? "Server error during file upload. Please try again later."
-          : alert("Something went wrong, please try later!") );
+        setGeneratingPDF(false);
+      } catch (error) {
+        console.error("File upload error:", error);
+        setUploadError(error.message);
+        setGeneratingPDF(false);
+      }
+    } else {
+      try {
+        const response = await axios.post(
+          `${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT_REAL_API}/upload_ppt/`,
+          formData,
+        );
+        if (response.status !== 200) {
+          throw new Error(
+            response.status >= 500
+              ? "Server error during file upload. Please try again later."
+              : "File upload error. Please check the file format and try again.",
+          );
+        } else {
+          const { session_id, pdf_content, file_name, total_slides } =
+            response.data;
+          setSessionId(session_id);
+          setTotalSlides(total_slides);
+          const pdfBlob = new Blob(
+            [Uint8Array.from(atob(pdf_content), (c) => c.charCodeAt(0))],
+            { type: "application/pdf" },
+          );
+          const pdfUrl = URL.createObjectURL(pdfBlob);
+          setPdfFile(pdfUrl);
+          setReadingPPT(true);
+          const res = await axios.post(
+            `${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT_REAL_API}/explain_ppt/?file_name=${file_name}&session_id=${session_id}&voice=${selectedVoice}`,
+          );
+          if (res.status == 200) {
+            setReadingPPT(false);
+          } else {
+            throw new Error(
+              res.status >= 500
+                ? "Server error during file upload. Please try again later."
+                : alert("Something went wrong, please try later!"),
+            );
+          }
+        }
+      } catch (error) {
+        console.error("File upload error:", error);
+        setUploadError(error.message);
+        setGeneratingPDF(false);
       }
     }
-
-   
-  } catch (error) {
-    console.error('File upload error:', error);
-    setUploadError(error.message);
-    setGeneratingPDF(false);
-  }
-
-}
   };
 
   const handleOpenPromptDialog = () => {
@@ -153,14 +174,13 @@ if(selectedLLM == 'gpt-4-o'){
               label="Choose LLM"
               value={selectedLLM}
               onChange={handleLLMChange}
-           
             >
-              <MenuItem value="gpt-4-o" >GPT-4-O</MenuItem>
-              <MenuItem value="realtime-gpt" >REALTIME GPT</MenuItem>
+              <MenuItem value="gpt-4-o">GPT-4-O</MenuItem>
+              <MenuItem value="realtime-gpt">REALTIME GPT</MenuItem>
             </Select>
           </FormControl>
         </Grid>
-      
+
         <Grid item xs={3}>
           <FormControl size="small" fullWidth margin="normal">
             <InputLabel id="Choose STT">Choose STT</InputLabel>
@@ -170,39 +190,48 @@ if(selectedLLM == 'gpt-4-o'){
               onChange={handleSTTChange}
             >
               <MenuItem value="azure">AZURE</MenuItem>
-              <MenuItem value="deepgram" disabled>DEEPGRAM</MenuItem>
+              <MenuItem value="deepgram" disabled>
+                DEEPGRAM
+              </MenuItem>
             </Select>
           </FormControl>
         </Grid>
-        
-        {selectedLLM == 'gpt-4-o' ? 
-        <Grid item xs={3}  marginTop={2}>
-          <Button variant="outlined" sx={{textTransform:"capitalize"}} onClick={handleOpenPromptDialog}>
-            Configure Prompts
-          </Button>
-        </Grid>
-        :
-      
-        <Grid item xs={3}>
-          <FormControl size="small" fullWidth margin="normal">
-            <InputLabel id="Choose Voice">Choose Voice</InputLabel>
-            <Select
-             label="Choose Voice"
-             value={selectedVoice}
-             onChange={handleVoiceChange}
+
+        {selectedLLM == "gpt-4-o" ? (
+          <Grid item xs={3} marginTop={2}>
+            <Button
+              variant="outlined"
+              sx={{ textTransform: "capitalize" }}
+              onClick={handleOpenPromptDialog}
             >
-              {voices.map((eachVoice, ind) =><MenuItem key={ind} value={eachVoice}>{eachVoice}</MenuItem> )}
-            </Select>
-          </FormControl>
-        </Grid>
-      }
+              Configure Prompts
+            </Button>
+          </Grid>
+        ) : (
+          <Grid item xs={3}>
+            <FormControl size="small" fullWidth margin="normal">
+              <InputLabel id="Choose Voice">Choose Voice</InputLabel>
+              <Select
+                label="Choose Voice"
+                value={selectedVoice}
+                onChange={handleVoiceChange}
+              >
+                {voices.map((eachVoice, ind) => (
+                  <MenuItem key={ind} value={eachVoice}>
+                    {eachVoice}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Grid>
+        )}
         <Grid item xs={3}>
           <FormControl fullWidth margin="normal">
             <Button
               variant="contained"
               component="label"
               disabled={!selectedLLM || !selectedSTT}
-              sx={{textTransform:"capitalize"}}
+              sx={{ textTransform: "capitalize" }}
             >
               Upload File
               <input
@@ -222,37 +251,63 @@ if(selectedLLM == 'gpt-4-o'){
               src={`${pdfFile}#page=${currentSlide.toString()}`}
               width="100%"
               height="624px"
-              style={{ border: '1px solid #ccc' }}
+              style={{ border: "1px solid #ccc" }}
               title="Generated PDF"
             ></iframe>
           </Grid>
         )}
         {generatingPDF && (
-          <Box style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%", marginTop: "60px" }}>
+          <Box
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "100%",
+              marginTop: "60px",
+            }}
+          >
             <CircularProgress />
-            <Typography marginTop={"30px"}>{selectedLLM == 'gpt-4-o' ? "Activating virtual presenter for you..." : "Uploading file data..."}</Typography>
+            <Typography marginTop={"30px"}>
+              {selectedLLM == "gpt-4-o"
+                ? "Activating virtual presenter for you..."
+                : "Uploading file data..."}
+            </Typography>
           </Box>
         )}
-        
       </Grid>
 
       {/* Voice Conversion Component */}
-      {
-        selectedLLM == 'gpt-4-o' ? 
-        <VoiceConversion goToNextSlide={goToNextSlide} fileUploaded={!!pdfFile} sessionId={sessionId} totalslides={totalslides} />
-        :
-        <VoiceConversionRealTimeAPI readingPPT={readingPPT} goToNextSlide={goToNextSlide} fileUploaded={!!pdfFile} sessionId={sessionId} totalslides={totalslides} />
-      }
-     
+      {selectedLLM == "gpt-4-o" ? (
+        <VoiceConversion
+          goToNextSlide={goToNextSlide}
+          fileUploaded={!!pdfFile}
+          sessionId={sessionId}
+          totalslides={totalslides}
+        />
+      ) : (
+        <VoiceConversionRealTimeAPI
+          readingPPT={readingPPT}
+          goToNextSlide={goToNextSlide}
+          fileUploaded={!!pdfFile}
+          sessionId={sessionId}
+          totalslides={totalslides}
+        />
+      )}
+
       {/* Dialog for User/System Prompt */}
-      <Dialog open={openPromptDialog} onClose={handleClosePromptDialog} fullWidth maxWidth="sm">
+      <Dialog
+        open={openPromptDialog}
+        onClose={handleClosePromptDialog}
+        fullWidth
+        maxWidth="sm"
+      >
         <DialogTitle>
           Configure Prompts
           <IconButton
             aria-label="close"
             onClick={handleClosePromptDialog}
             sx={{
-              position: 'absolute',
+              position: "absolute",
               right: 8,
               top: 8,
               color: (theme) => theme.palette.grey[500],
@@ -289,7 +344,11 @@ if(selectedLLM == 'gpt-4-o'){
           <Button onClick={handleClosePromptDialog} color="primary">
             Close
           </Button>
-          <Button onClick={handleClosePromptDialog} color="primary" variant="contained">
+          <Button
+            onClick={handleClosePromptDialog}
+            color="primary"
+            variant="contained"
+          >
             Save
           </Button>
         </DialogActions>

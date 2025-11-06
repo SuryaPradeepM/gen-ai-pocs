@@ -1,21 +1,34 @@
-
-
-
-
-import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
-import RecordRTC from 'recordrtc';
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-import { Button, CircularProgress, Typography, Box, Paper, Snackbar, Alert, IconButton } from '@mui/material';
-import SimCardDownloadOutlinedIcon from '@mui/icons-material/SimCardDownloadOutlined';
+import React, { useState, useEffect, useRef } from "react";
+import axios from "axios";
+import RecordRTC from "recordrtc";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
+import {
+  Button,
+  CircularProgress,
+  Typography,
+  Box,
+  Paper,
+  Snackbar,
+  Alert,
+  IconButton,
+} from "@mui/material";
+import SimCardDownloadOutlinedIcon from "@mui/icons-material/SimCardDownloadOutlined";
 import * as speechSdk from "microsoft-cognitiveservices-speech-sdk"; // Azure Speech SDK import
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
+import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
+import SkipNextIcon from "@mui/icons-material/SkipNext";
 
-const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, totalslides, readingPPT }) => {
+const VoiceConversionRealTimeAPI = ({
+  sessionId,
+  fileUploaded,
+  goToNextSlide,
+  totalslides,
+  readingPPT,
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [presentationStarted, setPresentationStarted] = useState(false);
-  const [slideText, setSlideText] = useState('');
+  const [slideText, setSlideText] = useState("");
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState(null);
   const [audioData, setAudioData] = useState(null);
@@ -24,34 +37,35 @@ const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, to
   const [isPermissionDenied, setIsPermissionDenied] = useState(false);
   const mediaRecorderRef = useRef(null);
   const [allTranscripts, setAllTranscripts] = useState([]);
-  const { transcript: speechTranscript, listening, resetTranscript } = useSpeechRecognition();
+  const {
+    transcript: speechTranscript,
+    listening,
+    resetTranscript,
+  } = useSpeechRecognition();
   const scrollRef = useRef(null);
   const timeoutRef = useRef(null);
-  const [isPreloading, setIsPreloading] = useState(false)
-  const [navFlag, setNavFlag] = useState(true)
+  const [isPreloading, setIsPreloading] = useState(false);
+  const [navFlag, setNavFlag] = useState(true);
   const [audioQueue, setAudioQueue] = useState([]); // To store pre-fetched audio URLs
-  const [disableNext, setDisableNext] = useState(true)
+  const [disableNext, setDisableNext] = useState(true);
   // Load Azure Speech SDK configuration from .env
   const speechConfig = speechSdk.SpeechConfig.fromSubscription(
     process.env.REACT_APP_AZURE_SPEECH_KEY,
-    process.env.REACT_APP_AZURE_REGION
+    process.env.REACT_APP_AZURE_REGION,
   );
-
-
 
   useEffect(() => {
     scrollToBottom();
   }, [allTranscripts, listening]);
 
-
-
   useEffect(() => {
-    navigator.mediaDevices.getUserMedia({ audio: true })
+    navigator.mediaDevices
+      .getUserMedia({ audio: true })
       .then((stream) => {
-        mediaRecorderRef.current = new RecordRTC(stream, { type: 'audio' });
+        mediaRecorderRef.current = new RecordRTC(stream, { type: "audio" });
       })
       .catch((error) => {
-        console.error('Error accessing microphone:', error);
+        console.error("Error accessing microphone:", error);
         setIsPermissionDenied(true);
       });
   }, []);
@@ -70,7 +84,7 @@ const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, to
 
   useEffect(() => {
     if (slideText) {
-      const temp = [...allTranscripts, { speaker: 'System', text: slideText }];
+      const temp = [...allTranscripts, { speaker: "System", text: slideText }];
       setAllTranscripts(temp);
     }
   }, [slideText]);
@@ -96,22 +110,22 @@ const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, to
   };
 
   const handleExportTranscripts = async () => {
-    alert('DOWNLOAD');
+    alert("DOWNLOAD");
     try {
       const response = await axios({
         url: `${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT}/download_transcript/${sessionId}`,
-        method: 'GET',
-        responseType: 'blob',
+        method: "GET",
+        responseType: "blob",
       });
-      const blob = new Blob([response.data], { type: 'text/plain' });
-      const link = document.createElement('a');
+      const blob = new Blob([response.data], { type: "text/plain" });
+      const link = document.createElement("a");
       link.href = window.URL.createObjectURL(blob);
-      link.download = 'transcript.txt';
+      link.download = "transcript.txt";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     } catch (error) {
-      console.error('Error downloading the file:', error);
+      console.error("Error downloading the file:", error);
     }
   };
 
@@ -122,33 +136,35 @@ const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, to
       synthesizer.speakTextAsync(
         text,
         (result) => {
-          if (result.reason === speechSdk.ResultReason.SynthesizingAudioCompleted) {
+          if (
+            result.reason === speechSdk.ResultReason.SynthesizingAudioCompleted
+          ) {
             const audioStream = result.audioData; // Retrieve the audio stream
-            const audioBlob = new Blob([audioStream], { type: 'audio/wav' });
+            const audioBlob = new Blob([audioStream], { type: "audio/wav" });
             const audioUrl = window.URL.createObjectURL(audioBlob);
 
-            const temp = audioQueue
-            temp[currentSlide] = { slide: currentSlide, audioUrl, text }
-            setAudioQueue([...temp])
+            const temp = audioQueue;
+            temp[currentSlide] = { slide: currentSlide, audioUrl, text };
+            setAudioQueue([...temp]);
 
             // Load the audio into an HTML audio element
             setAudioData(audioUrl);
             // setIsPlaying(true);
           } else {
-            console.error('Speech synthesis failed: ', result.errorDetails);
-            setError('Speech synthesis failed.');
+            console.error("Speech synthesis failed: ", result.errorDetails);
+            setError("Speech synthesis failed.");
           }
           synthesizer.close();
         },
         (err) => {
-          console.error('Error during speech synthesis: ', err);
-          setError('Error during speech synthesis.');
+          console.error("Error during speech synthesis: ", err);
+          setError("Error during speech synthesis.");
           synthesizer.close();
-        }
+        },
       );
     } catch (error) {
-      console.error('An error occurred during speech synthesis:', error);
-      setError('An error occurred while synthesizing speech.');
+      console.error("An error occurred during speech synthesis:", error);
+      setError("An error occurred while synthesizing speech.");
     }
   };
 
@@ -194,26 +210,30 @@ const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, to
   //   }
   // };
 
-
   const handlePrevSlide = async () => {
     try {
-      goToNextSlide(currentSlide - 1)
+      goToNextSlide(currentSlide - 1);
       setUploading(true);
-      const textResponse = await axios.get(`${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT_REAL_API}/retrieve_slide_output/?session_id=${sessionId}&slide_number=${currentSlide - 1}&file_type=txt`);
-      const audioResponse = await axios.get(`${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT_REAL_API}/retrieve_slide_output/?session_id=${sessionId}&slide_number=${currentSlide - 1}&file_type=wav`,
-        { responseType: 'arraybuffer' });
-      if (audioResponse.status === 200
-        && textResponse.status == 200
-      ) {
-        const audioBlob = new Blob([audioResponse.data], { type: 'audio/wav' });
+      const textResponse = await axios.get(
+        `${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT_REAL_API}/retrieve_slide_output/?session_id=${sessionId}&slide_number=${currentSlide - 1}&file_type=txt`,
+      );
+      const audioResponse = await axios.get(
+        `${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT_REAL_API}/retrieve_slide_output/?session_id=${sessionId}&slide_number=${currentSlide - 1}&file_type=wav`,
+        { responseType: "arraybuffer" },
+      );
+      if (audioResponse.status === 200 && textResponse.status == 200) {
+        const audioBlob = new Blob([audioResponse.data], { type: "audio/wav" });
         const audioUrl = window.URL.createObjectURL(audioBlob);
-        const text = textResponse.data
-        setAudioData(audioUrl)
-        setSlideText(text)
-        console.log(">>>>", audioResponse, text)
-        setCurrentSlide(currentSlide - 1)
+        const text = textResponse.data;
+        setAudioData(audioUrl);
+        setSlideText(text);
+        console.log(">>>>", audioResponse, text);
+        setCurrentSlide(currentSlide - 1);
 
-        const temp = [...audioQueue, { slide: currentSlide + 1, audioUrl, text }]
+        const temp = [
+          ...audioQueue,
+          { slide: currentSlide + 1, audioUrl, text },
+        ];
       } else {
         throw new Error(`Unexpected response from server: ${response.status}`);
       }
@@ -222,29 +242,34 @@ const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, to
     } finally {
       setUploading(false);
     }
-  }
+  };
 
   const handlePresentation = async () => {
     if (!presentationStarted) {
       setPresentationStarted(true);
     }
-    goToNextSlide(currentSlide + 1)
+    goToNextSlide(currentSlide + 1);
     try {
       setUploading(true);
-      const textResponse = await axios.get(`${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT_REAL_API}/retrieve_slide_output/?session_id=${sessionId}&slide_number=${currentSlide + 1}&file_type=txt`);
-      const audioResponse = await axios.get(`${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT_REAL_API}/retrieve_slide_output/?session_id=${sessionId}&slide_number=${currentSlide + 1}&file_type=wav`,
-        { responseType: 'arraybuffer' });
-      if (audioResponse.status === 200
-        && textResponse.status == 200
-      ) {
-        const audioBlob = new Blob([audioResponse.data], { type: 'audio/wav' });
+      const textResponse = await axios.get(
+        `${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT_REAL_API}/retrieve_slide_output/?session_id=${sessionId}&slide_number=${currentSlide + 1}&file_type=txt`,
+      );
+      const audioResponse = await axios.get(
+        `${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT_REAL_API}/retrieve_slide_output/?session_id=${sessionId}&slide_number=${currentSlide + 1}&file_type=wav`,
+        { responseType: "arraybuffer" },
+      );
+      if (audioResponse.status === 200 && textResponse.status == 200) {
+        const audioBlob = new Blob([audioResponse.data], { type: "audio/wav" });
         const audioUrl = window.URL.createObjectURL(audioBlob);
-        const text = textResponse.data
-        setAudioData(audioUrl)
-        setSlideText(text)
-        console.log(">>>>", audioResponse, text)
-        setCurrentSlide(currentSlide + 1)
-        const temp = [...audioQueue, { slide: currentSlide + 1, audioUrl, text }]
+        const text = textResponse.data;
+        setAudioData(audioUrl);
+        setSlideText(text);
+        console.log(">>>>", audioResponse, text);
+        setCurrentSlide(currentSlide + 1);
+        const temp = [
+          ...audioQueue,
+          { slide: currentSlide + 1, audioUrl, text },
+        ];
       } else {
         throw new Error(`Unexpected response from server: ${response.status}`);
       }
@@ -253,27 +278,29 @@ const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, to
     } finally {
       setUploading(false);
     }
-
   };
 
   const handleError = (error) => {
     if (error.response) {
-      console.error('Server responded with an error:', error.response.data);
+      console.error("Server responded with an error:", error.response.data);
     } else if (error.request) {
-      console.error('No response received:', error.request);
+      console.error("No response received:", error.request);
     } else {
-      console.error('Error in setting up request:', error.message);
+      console.error("Error in setting up request:", error.message);
     }
-    setError('An error occurred. Please try again.');
+    setError("An error occurred. Please try again.");
   };
 
   const startRecording = () => {
     if (isPermissionDenied) {
-      setError('Microphone access is denied.');
+      setError("Microphone access is denied.");
       return;
     }
     setIsListening(true);
-    SpeechRecognition.startListening({ continuous: true, interimResults: true });
+    SpeechRecognition.startListening({
+      continuous: true,
+      interimResults: true,
+    });
     resetTimeout();
   };
 
@@ -284,17 +311,26 @@ const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, to
     clearTimeout(timeoutRef.current);
     if (speechTranscript) {
       const tempTranscript = speechTranscript;
-      const temp = [...allTranscripts, { speaker: 'You', text: tempTranscript }];
+      const temp = [
+        ...allTranscripts,
+        { speaker: "You", text: tempTranscript },
+      ];
       setAllTranscripts(temp);
       resetTranscript();
 
       try {
-        const response = await axios.post(`${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT}/ask_question/${sessionId}`, {
-          question: tempTranscript,
-        });
+        const response = await axios.post(
+          `${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT}/ask_question/${sessionId}`,
+          {
+            question: tempTranscript,
+          },
+        );
 
         const botTranscript = response.data.answer;
-        const temp = [...allTranscripts, { speaker: 'Presenter', text: botTranscript }];
+        const temp = [
+          ...allTranscripts,
+          { speaker: "Presenter", text: botTranscript },
+        ];
         setAllTranscripts(temp);
         await fetchAndPlayAudio(botTranscript);
       } catch (error) {
@@ -305,31 +341,34 @@ const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, to
     }
   };
 
-
-
   const deleteSession = async () => {
     try {
       const response = await axios.delete(
         `${process.env.REACT_APP_VIRTUAL_PRESENTER_ENDPOINT_REAL_API}/clean_session/?session_id=${sessionId}`,
         {
           headers: {
-            'accept': 'application/json'
-          }
-        }
+            accept: "application/json",
+          },
+        },
       );
-      console.log('Session deleted successfully:', response.data);
+      console.log("Session deleted successfully:", response.data);
     } catch (error) {
-      console.error('Error deleting session:', error);
+      console.error("Error deleting session:", error);
     }
     window.location.reload();
   };
 
-
-
   return (
-    <Box sx={{ height: '78vh', paddingBottom: '40px', width: '25%', marginTop: "32px" }}>
+    <Box
+      sx={{
+        height: "78vh",
+        paddingBottom: "40px",
+        width: "25%",
+        marginTop: "32px",
+      }}
+    >
       <Paper elevation={3} sx={{ padding: 2 }}>
-        {!presentationStarted &&
+        {!presentationStarted && (
           <Button
             onClick={handlePresentation}
             variant="contained"
@@ -339,18 +378,22 @@ const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, to
           >
             Start Presentation
           </Button>
-        }
+        )}
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           {presentationStarted && (
             <Box>
               <Button
                 onClick={handlePrevSlide}
-                disabled={!sessionId || currentSlide > totalslides || currentSlide < 2}
+                disabled={
+                  !sessionId || currentSlide > totalslides || currentSlide < 2
+                }
                 aria-label="previous slide"
                 title="previous slide"
                 startIcon={<SkipPreviousIcon />}
-                variant='outlined'
-              > Prev
+                variant="outlined"
+              >
+                {" "}
+                Prev
               </Button>
               {/* <Button
               onClick={startRecording}
@@ -365,18 +408,20 @@ const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, to
                 onClick={handlePresentation}
                 disabled={!sessionId || currentSlide >= totalslides}
                 aria-label="next slide"
-                title='next slide'
-                variant='outlined'
+                title="next slide"
+                variant="outlined"
                 sx={{ marginLeft: "16px" }}
-                endIcon={<SkipNextIcon />}>
+                endIcon={<SkipNextIcon />}
+              >
                 Next
-
               </Button>
-             
             </Box>
           )}
           {allTranscripts?.length > 0 && (
-            <Button title="Download Transcripts" onClick={handleExportTranscripts}>
+            <Button
+              title="Download Transcripts"
+              onClick={handleExportTranscripts}
+            >
               <SimCardDownloadOutlinedIcon />
             </Button>
           )}
@@ -385,55 +430,86 @@ const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, to
       <Box
         ref={scrollRef}
         sx={{
-          height: 'calc(100% - 50px)',
-          overflowY: 'auto',
-          padding: '16px',
-          border: '1px solid #ccc',
-          borderRadius: '8px',
-          marginTop: '16px',
-          marginBottom: '16px'
+          height: "calc(100% - 50px)",
+          overflowY: "auto",
+          padding: "16px",
+          border: "1px solid #ccc",
+          borderRadius: "8px",
+          marginTop: "16px",
+          marginBottom: "16px",
         }}
       >
         {allTranscripts.map((transcript, index) => (
-          <Typography key={index} variant="body1" gutterBottom sx={{ fontSize: "14px" }}>
+          <Typography
+            key={index}
+            variant="body1"
+            gutterBottom
+            sx={{ fontSize: "14px" }}
+          >
             <strong>{transcript.speaker}:</strong> {transcript.text}
           </Typography>
         ))}
-        {readingPPT && fileUploaded && 
-        <Box sx={{marginTop:"24px", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
-          <CircularProgress />
-          <Typography sx={{marginTop:"8px"}}>Activating virtual presenter...</Typography>
-          </Box>}
-        {
-          listening &&
+        {readingPPT && fileUploaded && (
+          <Box
+            sx={{
+              marginTop: "24px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <CircularProgress />
+            <Typography sx={{ marginTop: "8px" }}>
+              Activating virtual presenter...
+            </Typography>
+          </Box>
+        )}
+        {listening && (
           <Typography variant="body1" gutterBottom>
             <strong>You:</strong> {speechTranscript}
           </Typography>
-        }
+        )}
         {uploading && (
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <CircularProgress />
           </Box>
         )}
       </Box>
-      <Box sx={{display:"flex", alignItems:"center"}}>
-      <audio
-        src={audioData}
-        controls
-        autoPlay
-        onEnded={() => { setIsPlaying(false) }}
-        onPause={() => setIsPlaying(false)}
-        onPlay={() => { setIsPlaying(true) }}
-      />
-       <Button
-        sx={{ marginLeft: "12px", textTransform:"capitalize", height:"38px" }}
-         onClick={deleteSession} 
-         variant="contained" 
-         color="error" 
-         title="end presentation"
-         disabled={!fileUploaded || (readingPPT && fileUploaded)}
-         >End</Button>
-       </Box>
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        <audio
+          src={audioData}
+          controls
+          autoPlay
+          onEnded={() => {
+            setIsPlaying(false);
+          }}
+          onPause={() => setIsPlaying(false)}
+          onPlay={() => {
+            setIsPlaying(true);
+          }}
+        />
+        <Button
+          sx={{
+            marginLeft: "12px",
+            textTransform: "capitalize",
+            height: "38px",
+          }}
+          onClick={deleteSession}
+          variant="contained"
+          color="error"
+          title="end presentation"
+          disabled={!fileUploaded || (readingPPT && fileUploaded)}
+        >
+          End
+        </Button>
+      </Box>
       {error && (
         <Snackbar open autoHideDuration={6000} onClose={() => setError(null)}>
           <Alert onClose={() => setError(null)} severity="error">
@@ -446,6 +522,3 @@ const VoiceConversionRealTimeAPI = ({ sessionId, fileUploaded, goToNextSlide, to
 };
 
 export default VoiceConversionRealTimeAPI;
-
-
-

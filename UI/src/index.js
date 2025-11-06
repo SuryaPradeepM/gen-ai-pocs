@@ -1,19 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import { CssBaseline, StyledEngineProvider } from '@mui/material';
-import { ThemeProvider } from '@mui/material/styles';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { CssBaseline, StyledEngineProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+import "./index.css";
+import App from "./App";
 import applicationTheme from "./applicationTheme";
-import reportWebVitals from './reportWebVitals';
-import GlobalState from './Context/GlobalState';
+import reportWebVitals from "./reportWebVitals";
+import GlobalState from "./Context/GlobalState";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-
-
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.Fragment>
@@ -27,7 +23,7 @@ root.render(
         </GlobalState>
       </ThemeProvider>
     </StyledEngineProvider>
-  </React.Fragment >
+  </React.Fragment>,
 );
 
 // If you want to start measuring performance in your app, pass a function

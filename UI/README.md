@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# UI for GenAI Playzone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installation & Testing
 
-## Available Scripts
+### `npm install`
 
-In the project directory, you can run:
+Installs packages
 
 ### `npm start`
 
@@ -13,6 +13,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+### Prettier linting
+
+> `npm install --save-dev prettier`
+> `npx prettier --write "src/**/*.js"`
 
 ### `npm test`
 

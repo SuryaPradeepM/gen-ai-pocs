@@ -3,12 +3,17 @@ import * as speechSdk from "microsoft-cognitiveservices-speech-sdk";
 
 const TextToSpeech = ({ apiKey, region }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [textToRead, setTextToRead] = useState("Hello, this is an announcement.");
+  const [textToRead, setTextToRead] = useState(
+    "Hello, this is an announcement.",
+  );
   const audioElement = useRef(null); // Ref to control audio playback
 
   // Function to start speaking
   const playText = () => {
-    const speechConfig = speechSdk.SpeechConfig.fromSubscription(apiKey, region);
+    const speechConfig = speechSdk.SpeechConfig.fromSubscription(
+      apiKey,
+      region,
+    );
 
     // Disable automatic playback by omitting AudioConfig
     const synthesizer = new speechSdk.SpeechSynthesizer(speechConfig, null);
@@ -16,7 +21,9 @@ const TextToSpeech = ({ apiKey, region }) => {
     synthesizer.speakTextAsync(
       textToRead,
       (result) => {
-        if (result.reason === speechSdk.ResultReason.SynthesizingAudioCompleted) {
+        if (
+          result.reason === speechSdk.ResultReason.SynthesizingAudioCompleted
+        ) {
           // When synthesis is complete, retrieve the audio data
           const audioStream = result.audioData;
           const audioBlob = new Blob([audioStream], { type: "audio/wav" });
@@ -42,7 +49,7 @@ const TextToSpeech = ({ apiKey, region }) => {
       (err) => {
         console.error("Error during speech synthesis: ", err);
         synthesizer.close();
-      }
+      },
     );
   };
 
