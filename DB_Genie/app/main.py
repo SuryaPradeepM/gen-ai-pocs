@@ -21,7 +21,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 app = FastAPI(
-    title="DB Agent AI",
+    title="DB Genie",
     description="A hybrid AI agent to retrieve data from SQL databases and documents, answer questions, and generate visualizations",
     version="2.0.0",
 )
@@ -116,14 +116,6 @@ async def startup_event():
     except Exception as e:
         logger.error(f"Critical error during startup: {str(e)}")
         # Don't raise - allow API to start in degraded mode
-
-
-@app.on_event("shutdown")
-async def shutdown_event():
-    """Cleanup on shutdown"""
-    logger.info("Shutting down application...")
-    # Add any cleanup logic here (close DB connections, etc.)
-
 
 @app.get("/health")
 async def health_check():

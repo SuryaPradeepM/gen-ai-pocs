@@ -189,7 +189,8 @@ pytest tests/
 
 ### Code Style
 
-```
+```sh
+# pip install ruff isort
 ruff format app/
 isort --profile black app/
 ```
