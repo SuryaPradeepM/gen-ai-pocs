@@ -9,8 +9,8 @@ from app.services.embeddings import EmbeddingsService
 from app.services.vector_store import VectorStoreService
 
 app = FastAPI(
-    title="RAG Chatbot API",
-    description="A RAG-based chatbot API using Azure OpenAI",
+    title="HR Chatbot API",
+    description="HR Policies RAG-based chatbot API using Azure OpenAI",
     version="1.0.0",
 )
 

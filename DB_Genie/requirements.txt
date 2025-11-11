@@ -1,0 +1,28 @@
+# Core Framework
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+
+# Azure OpenAI
+openai
+
+# LangChain & SQL
+langchain
+langchain-openai
+langchain-community
+sqlalchemy
+
+# Vector Store & Embeddings
+faiss-cpu
+pypdf
+
+# Visualization
+matplotlib
+seaborn
+plotly
+pandas
+
+# CORS
+python-multipart
