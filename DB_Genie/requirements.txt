@@ -4,6 +4,7 @@ uvicorn[standard]
 pydantic
 pydantic-settings
 python-dotenv
+python-multipart
 
 # Azure OpenAI
 openai
@@ -11,6 +12,7 @@ openai
 # LangChain & SQL
 langchain
 langchain-openai
+langgraph
 langchain-community
 sqlalchemy
 
@@ -23,6 +25,3 @@ matplotlib
 seaborn
 plotly
 pandas
-
-# CORS
-python-multipart

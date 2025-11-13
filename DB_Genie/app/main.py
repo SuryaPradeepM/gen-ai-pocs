@@ -29,7 +29,7 @@ app = FastAPI(
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.ALLOWED_ORIGINS,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -102,7 +102,6 @@ async def startup_event():
         # Initialize query router
         query_router_service = QueryRouterService()
 
-        # FIX: Use proper dependency injection instead of global assignment
         # Store services in app state for access by routes
         app.state.vector_store_service = vector_store_service
         app.state.database_service = database_service
@@ -116,6 +115,7 @@ async def startup_event():
     except Exception as e:
         logger.error(f"Critical error during startup: {str(e)}")
         # Don't raise - allow API to start in degraded mode
+
 
 @app.get("/health")
 async def health_check():

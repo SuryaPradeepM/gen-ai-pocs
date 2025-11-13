@@ -121,7 +121,7 @@ async def prepare_messages_async(request: Request, session_id: str, user_message
 
     elif query_type == QueryType.SQL_QUERY and sql_agent_service:
         # Use SQL agent for structured data queries
-        sql_result = sql_agent_service.query(user_message)
+        sql_result = sql_agent_service.query_with_data(user_message)
 
         if sql_result["success"]:
             context_text = f"Database Query Result:\n{sql_result['answer']}"
@@ -130,7 +130,7 @@ async def prepare_messages_async(request: Request, session_id: str, user_message
 
     elif query_type == QueryType.VISUALIZATION and sql_agent_service:
         # Generate visualization from database query
-        sql_result = sql_agent_service.query(user_message)
+        sql_result = sql_agent_service.query_with_data(user_message)
 
         if sql_result["success"] and sql_result.get("data"):
             # Create visualization
@@ -155,7 +155,7 @@ async def prepare_messages_async(request: Request, session_id: str, user_message
 
         # Get SQL data
         if sql_agent_service:
-            sql_result = sql_agent_service.query(user_message)
+            sql_result = sql_agent_service.query_with_data(user_message)
             sql_context = sql_result["answer"] if sql_result["success"] else ""
         else:
             sql_context = ""
@@ -443,6 +443,13 @@ async def execute_sql_query(request: Request, query: dict):
             detail="Dangerous SQL operations not allowed. Only SELECT queries permitted.",
         )
 
+    if not sql_query.strip().upper().startswith("SELECT"):
+        raise HTTPException(
+            status_code=403,
+            detail="Only SELECT queries are allowed in this endpoint.",
+        )
+
+    # Potential SQL injection here (Only for debugging/demo)
     result = sql_agent_service.execute_raw_query(sql_query)
 
     if not result["success"]:

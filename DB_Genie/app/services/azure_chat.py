@@ -1,11 +1,18 @@
-import base64
-import os
+"""
+Azure OpenAI Chat Completion with streaming response example.
+"""
 
+import os
+from pathlib import Path
+
+from dotenv import load_dotenv
 from openai import AzureOpenAI
 
-endpoint = os.getenv("ENDPOINT_URL", "https://spacebot-az-openai.openai.azure.com/")
+load_dotenv(dotenv_path=Path(__file__).parent.parent / ".env")
+
+endpoint = os.getenv("ENDPOINT_URL")
 deployment = os.getenv("DEPLOYMENT_NAME", "gpt-5-mini")
-subscription_key = os.getenv("AZURE_OPENAI_API_KEY", "f11d1043b8de4450a35d89828569bb15")
+subscription_key = os.getenv("AZURE_OPENAI_API_KEY")
 
 # Initialize Azure OpenAI client with key-based authentication
 client = AzureOpenAI(
@@ -38,7 +45,6 @@ completion = client.chat.completions.create(
     model=deployment,
     messages=messages,
     max_completion_tokens=1600,
-    stop=None,
     stream=True,
 )
 

@@ -146,7 +146,7 @@ The system automatically detects query intent:
 ### Using SQLite (Default)
 
 ```
-DATABASE_URL=sqlite:///./hr_data.db
+DATABASE_URL=sqlite:///hr_data.db
 ```
 
 ### Using PostgreSQL
