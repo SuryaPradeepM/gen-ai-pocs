@@ -43,9 +43,9 @@ class ChatResponse(BaseModel):
 
     session_id: str
     message: ChatMessage
-    visualization: Optional[dict] = None  # NEW: For chart data
-    query_type: Optional[str] = None  # NEW: For debugging
-    data: Optional[List[dict]] = None  # NEW: For structured data results
+    visualization: Optional[dict] = None  # For chart data
+    query_type: Optional[str] = None  # For debugging
+    data: Optional[List[dict]] = None  # For structured data results
 
 
 def extract_text_from_content(content: List[ContentItem]) -> str:
@@ -63,7 +63,6 @@ def convert_to_azure_format(messages: List[dict]) -> List[dict]:
     azure_messages = []
     for msg in messages:
         if isinstance(msg.get("content"), list):
-            # New format: content is array
             text_content = " ".join(
                 [
                     item.get("text", "")
@@ -73,7 +72,6 @@ def convert_to_azure_format(messages: List[dict]) -> List[dict]:
             )
             azure_messages.append({"role": msg["role"], "content": text_content})
         else:
-            # Already in Azure format
             azure_messages.append(msg)
     return azure_messages
 
@@ -123,24 +121,46 @@ async def prepare_messages_async(request: Request, session_id: str, user_message
         # Use SQL agent for structured data queries
         sql_result = sql_agent_service.query_with_data(user_message)
 
-        if sql_result["success"]:
+        if sql_result["success"] and sql_result.get("data"):
+            context_text = f"Database Query Result:\n{sql_result['answer']}"
+
+            # Check if we should auto-generate visualization
+            data = sql_result["data"]
+            if len(data) >= 2 and len(data) <= 50:  # Auto-viz for 2-50 rows
+                # Check if data has numeric columns
+                first_row = data[0]
+                has_numeric = any(
+                    isinstance(v, (int, float)) for v in first_row.values()
+                )
+
+                if has_numeric or needs_visualization:
+                    # Generate visualization automatically
+                    viz_result = visualization_service.create_visualization(
+                        data=data,
+                        chart_type="auto",
+                        title=None,  # Will auto-generate
+                    )
+
+                    if viz_result["success"]:
+                        visualization_data = viz_result
+        elif sql_result["success"]:
             context_text = f"Database Query Result:\n{sql_result['answer']}"
         else:
             context_text = f"Database query failed: {sql_result['error']}"
 
     elif query_type == QueryType.VISUALIZATION and sql_agent_service:
-        # Generate visualization from database query
+        # Explicitly requested visualization
         sql_result = sql_agent_service.query_with_data(user_message)
 
         if sql_result["success"] and sql_result.get("data"):
-            # Create visualization
+            # Generate visualization
             viz_result = visualization_service.create_visualization(
-                data=sql_result["data"], chart_type="auto", title=user_message
+                data=sql_result["data"], chart_type="auto", title=None
             )
 
             if viz_result["success"]:
                 visualization_data = viz_result
-                context_text = f"I've generated a {viz_result['chart_type']} visualization based on your query.\n\nData summary: {sql_result['answer']}"
+                context_text = f"A {viz_result['chart_type']} chart has been generated showing the data. {sql_result['answer']}"
             else:
                 context_text = f"Data retrieved but visualization failed: {viz_result['error']}\n\nData: {sql_result['answer']}"
         else:
@@ -148,8 +168,6 @@ async def prepare_messages_async(request: Request, session_id: str, user_message
 
     elif query_type == QueryType.HYBRID:
         # Combine vector search and SQL query
-
-        # Get policy context
         context = await vector_store_service.similarity_search(user_message)
         policy_context = "\n\n".join([doc.page_content for doc in context])
 
@@ -157,6 +175,16 @@ async def prepare_messages_async(request: Request, session_id: str, user_message
         if sql_agent_service:
             sql_result = sql_agent_service.query_with_data(user_message)
             sql_context = sql_result["answer"] if sql_result["success"] else ""
+
+            # Auto-visualize if data available
+            if sql_result["success"] and sql_result.get("data"):
+                data = sql_result["data"]
+                if len(data) >= 2 and len(data) <= 50:
+                    viz_result = visualization_service.create_visualization(
+                        data=data, chart_type="auto", title=None
+                    )
+                    if viz_result["success"]:
+                        visualization_data = viz_result
         else:
             sql_context = ""
 
@@ -172,12 +200,27 @@ async def prepare_messages_async(request: Request, session_id: str, user_message
     # Build messages array
     messages = []
 
-    # Add context to system message if available
+    # Critical system prompt to prevent code generation
     if context_text:
-        system_message = {
-            "role": "system",
-            "content": f"You are a helpful HR assistant. Use the following context to answer the user's question:\n\n{context_text}",
-        }
+        if visualization_data:
+            system_message = {
+                "role": "system",
+                "content": f"""You are a helpful HR assistant. A chart visualization has been automatically generated and will be shown to the user.
+
+{context_text}
+
+IMPORTANT INSTRUCTIONS:
+- DO NOT generate Python code or plotting instructions
+- DO NOT tell the user to run code
+- The visualization already exists and will be displayed automatically
+- Simply describe what the chart shows and provide insights about the data
+- Be concise and focus on explaining the results""",
+            }
+        else:
+            system_message = {
+                "role": "system",
+                "content": f"You are a helpful HR assistant. Use the following context to answer the user's question:\n\n{context_text}",
+            }
         messages.append(system_message)
 
     # Add session history (convert to Azure format)
@@ -244,12 +287,11 @@ async def chat(request: Request, chat_request: ChatRequest):
             else str(query_type),
         }
 
-        # Add visualization if available
-        if visualization_data:
+        # Add visualization with proper structure
+        if visualization_data and visualization_data.get("success"):
             response["visualization"] = {
                 "type": visualization_data.get("chart_type"),
-                "html": visualization_data.get("html"),
-                "image_base64": visualization_data.get("image_base64"),
+                "image_base64": visualization_data.get("image_base64"),  # PRIMARY
             }
 
         # Add structured data if available
@@ -264,11 +306,11 @@ async def chat(request: Request, chat_request: ChatRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+# Keep all other endpoints exactly as they were
 @router.post("/chat/stream")
 async def chat_stream(request: Request, chat_request: ChatRequest):
     """Streaming chat endpoint with session management"""
     try:
-        # Prepare messages with intelligent routing
         prep_result = await prepare_messages_async(
             request, chat_request.session_id, chat_request.message
         )
@@ -277,7 +319,6 @@ async def chat_stream(request: Request, chat_request: ChatRequest):
         query_type = prep_result["query_type"]
         visualization_data = prep_result["visualization_data"]
 
-        # Convert user message to new format and add to session
         user_message_new_format = convert_from_azure_format(
             "user", chat_request.message
         )
@@ -289,12 +330,11 @@ async def chat_stream(request: Request, chat_request: ChatRequest):
             nonlocal full_response
 
             # Send visualization first if available
-            if visualization_data:
+            if visualization_data and visualization_data.get("success"):
                 viz_data = {
                     "type": "visualization",
                     "data": {
                         "chart_type": visualization_data.get("chart_type"),
-                        "html": visualization_data.get("html"),
                         "image_base64": visualization_data.get("image_base64"),
                     },
                 }
@@ -306,7 +346,6 @@ async def chat_stream(request: Request, chat_request: ChatRequest):
                 data = json.dumps({"type": "content", "content": chunk})
                 yield f"data: {data}\n\n"
 
-            # After streaming completes, add assistant message to session
             assistant_message_new_format = convert_from_azure_format(
                 "assistant", full_response
             )
@@ -314,7 +353,6 @@ async def chat_stream(request: Request, chat_request: ChatRequest):
                 chat_request.session_id, assistant_message_new_format
             )
 
-            # Send completion marker
             completion_data = {
                 "type": "complete",
                 "query_type": query_type.value
@@ -369,24 +407,18 @@ async def upload_pdf(request: Request, file: UploadFile = File(...)):
         raise HTTPException(status_code=400, detail="Only PDF files are allowed")
 
     try:
-        # Get vector store service from app state
         vector_store_service = request.app.state.vector_store_service
 
-        # Save uploaded file temporarily
         with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
             content = await file.read()
             tmp_file.write(content)
             tmp_file.flush()
 
-            # Ingest PDF into vector store
             vector_store_service.ingest_pdf(tmp_file.name)
 
         return {"message": f"PDF '{file.filename}' successfully ingested"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
-
-# NEW: Database management endpoints
 
 
 @router.get("/database/schema")
@@ -422,10 +454,7 @@ async def get_table_sample(request: Request, table_name: str, limit: int = 5):
 
 @router.post("/query/sql")
 async def execute_sql_query(request: Request, query: dict):
-    """
-    Execute a raw SQL query (for advanced users).
-    Request body: {"query": "SELECT * FROM table_name LIMIT 10"}
-    """
+    """Execute a raw SQL query (for advanced users)."""
     sql_agent_service = request.app.state.sql_agent_service
 
     if not sql_agent_service:
@@ -435,7 +464,6 @@ async def execute_sql_query(request: Request, query: dict):
     if not sql_query:
         raise HTTPException(status_code=400, detail="Query parameter required")
 
-    # Security check: Prevent dangerous operations
     dangerous_keywords = ["DROP", "DELETE", "TRUNCATE", "ALTER", "UPDATE", "INSERT"]
     if any(keyword in sql_query.upper() for keyword in dangerous_keywords):
         raise HTTPException(
@@ -449,7 +477,6 @@ async def execute_sql_query(request: Request, query: dict):
             detail="Only SELECT queries are allowed in this endpoint.",
         )
 
-    # Potential SQL injection here (Only for debugging/demo)
     result = sql_agent_service.execute_raw_query(sql_query)
 
     if not result["success"]:
@@ -460,16 +487,7 @@ async def execute_sql_query(request: Request, query: dict):
 
 @router.post("/visualize")
 async def create_visualization(request: Request, viz_request: dict):
-    """
-    Create visualization from provided data.
-    Request body: {
-        "data": [...],
-        "chart_type": "bar",
-        "title": "Chart Title",
-        "x_column": "column1",
-        "y_column": "column2"
-    }
-    """
+    """Create visualization from provided data."""
     visualization_service = request.app.state.visualization_service
 
     data = viz_request.get("data")
@@ -482,7 +500,7 @@ async def create_visualization(request: Request, viz_request: dict):
         title=viz_request.get("title"),
         x_column=viz_request.get("x_column"),
         y_column=viz_request.get("y_column"),
-        interactive=viz_request.get("interactive", True),
+        interactive=False,  # Always static
     )
 
     if not result["success"]:
