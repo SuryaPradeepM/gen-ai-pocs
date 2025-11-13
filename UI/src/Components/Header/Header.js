@@ -124,11 +124,48 @@ function Header(props) {
                 }}
               ></Grid>
               {heading && (
-                <Typography className={classes.docLogoTitle}>
+                <Typography
+                  className={classes.docLogoTitle}
+                  onClick={() => {
+                    navigate("/");
+                    setHeading("");
+                    setWorkspaceScreenNumber(0);
+                  }}
+                  style={{ cursor: "pointer" }}
+                >
                   {heading}
                   <sup>alpha</sup>
                 </Typography>
               )}
+            </Grid>
+            {/* Center title: dynamic based on `heading`, defaults to GenAI Playzone */}
+            <Grid item className={classes.centerTitle}>
+              <Box
+                className={classes.playzoneWrapper}
+                onMouseEnter={() => {
+                  (heading == "Qute" || heading == "Virtual Presenter") &&
+                    openQuteHeader();
+                }}
+              >
+                <Typography
+                  className={classes.playzoneTitle}
+                  onClick={() => {
+                    navigate("/");
+                    setHeading("");
+                    setWorkspaceScreenNumber(0);
+                  }}
+                  style={{ cursor: "pointer" }}
+                >
+                  {heading ? heading : "GenAI PlayZone"}
+                </Typography>
+                {/* Playful halo and orbiting particle elements (animated on hover) */}
+                <span className={classes.playzoneHalo} />
+                <span className={classes.playzoneParticles}>
+                  <span className={classes.playParticle} />
+                  <span className={classes.playParticle2} />
+                  <span className={classes.playParticle3} />
+                </span>
+              </Box>
             </Grid>
             {heading == "Workspaces" && workspaceScreenNumber != 0 && (
               <Box

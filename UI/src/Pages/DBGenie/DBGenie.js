@@ -22,6 +22,8 @@ import {
   FileUploadSection,
 } from "../RAGChatbot/RAGChatbot.style";
 
+import NotificationPopup from "../../Components/NotificationPopup/NotificationPopup";
+
 // A lightweight DB Genie UI that supports streaming chat and visualizations.
 const DBGenie = () => {
   const [messages, setMessages] = useState([]);
@@ -604,6 +606,8 @@ const DBGenie = () => {
           </Paper>
         </Grid>
       </Grid>
+      {/* Friendly popup for transient status messages (bottom-right) */}
+      <NotificationPopup open={!!statusMessage} message={statusMessage} loading={loading} onClose={() => setStatusMessage("")} />
     </StyledContainer>
   );
 };

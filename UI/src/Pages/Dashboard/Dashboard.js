@@ -88,7 +88,7 @@ function Dashboard({ classes }) {
                 </Typography>
                 <Typography
                   className={classes.pocExplorationContentDes}
-                >{`Explore our collection of Generative AI (PoC, Proof of Concept) Applications, each designed to`}</Typography>
+                >{`Explore this collection of Mini Generative AI (PoC, Proof of Concept) Applications, each designed to`}</Typography>
                 <Typography
                   className={classes.pocExplorationContentDes}
                 >{`showcase the capabilities of Gen AI and push the boundaries of what's possible!`}</Typography>
@@ -110,6 +110,69 @@ function Dashboard({ classes }) {
             </Box>
             <Box className={classes.cardNavigation}>
               <Box id="cardContainer" className={classes.discoverPOCCards}>
+                <Card
+                  onClick={() => {
+                    isServiceAvailable("hr_policies_chatbot") &&
+                      navigate("/hr-policies-chatbot");
+                  }}
+                  className={`${classes.cardContainer} ${!isServiceAvailable("hr_policies_chatbot") && classes.disabledCard}`}
+                >
+                  <IconButton
+                    title="Go To HR Policies Chatbot"
+                    className={classes.gotoPOCBtn}
+                    onClick={() => navigate("/hr-policies-chatbot")}
+                  >
+                    <LaunchRoundedIcon />
+                  </IconButton>
+                  <Box className={classes.cardHead}>
+                    <PolicyIcon style={{ fontSize: 50, color: "#0460a9" }} />
+                  </Box>
+                  <Box className={classes.cardBody}>
+                    <Typography className={classes.cardHeading}>
+                      HR Policies Chatbot
+                    </Typography>
+                    <Typography
+                      className={classes.cardDes}
+                      variant="body2"
+                      color="text.secondary"
+                    >
+                      Ask questions about HR policies. Upload policy PDFs and
+                      get streamed answers.
+                    </Typography>
+                  </Box>
+                </Card>
+                
+                <Card
+                  onClick={() => {
+                    isServiceAvailable("db_genie") && navigate("/db-genie");
+                  }}
+                  className={`${classes.cardContainer} ${!isServiceAvailable("db_genie") && classes.disabledCard}`}
+                >
+                  <IconButton
+                    title="Go To DB Genie"
+                    className={classes.gotoPOCBtn}
+                    onClick={() => navigate("/db-genie")}
+                  >
+                    <LaunchRoundedIcon />
+                  </IconButton>
+                  <Box className={classes.cardHead}>
+                    <StorageIcon style={{ fontSize: 50, color: "#0460a9" }} />
+                  </Box>
+                  <Box className={classes.cardBody}>
+                    <Typography className={classes.cardHeading}>
+                      DB Genie
+                    </Typography>
+                    <Typography
+                      className={classes.cardDes}
+                      variant="body2"
+                      color="text.secondary"
+                    >
+                      Hybrid DB & document assistant — run SQL, get structured
+                      data, and generate visualizations from your database.
+                    </Typography>
+                  </Box>
+                </Card>
+
                 <Card
                   onClick={() => {
                     isServiceAvailable("virtual_presenter") &&
@@ -243,69 +306,6 @@ function Dashboard({ classes }) {
                       Chat with your documents using AI-powered RAG technology.
                       Upload PDFs and get intelligent responses based on their
                       content.
-                    </Typography>
-                  </Box>
-                </Card>
-
-                <Card
-                  onClick={() => {
-                    isServiceAvailable("db_genie") && navigate("/db-genie");
-                  }}
-                  className={`${classes.cardContainer} ${!isServiceAvailable("db_genie") && classes.disabledCard}`}
-                >
-                  <IconButton
-                    title="Go To DB Genie"
-                    className={classes.gotoPOCBtn}
-                    onClick={() => navigate("/db-genie")}
-                  >
-                    <LaunchRoundedIcon />
-                  </IconButton>
-                  <Box className={classes.cardHead}>
-                    <StorageIcon style={{ fontSize: 50, color: "#0460a9" }} />
-                  </Box>
-                  <Box className={classes.cardBody}>
-                    <Typography className={classes.cardHeading}>
-                      DB Genie
-                    </Typography>
-                    <Typography
-                      className={classes.cardDes}
-                      variant="body2"
-                      color="text.secondary"
-                    >
-                      Hybrid DB & document assistant — run SQL, get structured
-                      data, and generate visualizations from your database.
-                    </Typography>
-                  </Box>
-                </Card>
-
-                <Card
-                  onClick={() => {
-                    isServiceAvailable("hr_policies_chatbot") &&
-                      navigate("/hr-policies-chatbot");
-                  }}
-                  className={`${classes.cardContainer} ${!isServiceAvailable("hr_policies_chatbot") && classes.disabledCard}`}
-                >
-                  <IconButton
-                    title="Go To HR Policies Chatbot"
-                    className={classes.gotoPOCBtn}
-                    onClick={() => navigate("/hr-policies-chatbot")}
-                  >
-                    <LaunchRoundedIcon />
-                  </IconButton>
-                  <Box className={classes.cardHead}>
-                    <PolicyIcon style={{ fontSize: 50, color: "#0460a9" }} />
-                  </Box>
-                  <Box className={classes.cardBody}>
-                    <Typography className={classes.cardHeading}>
-                      HR Policies Chatbot
-                    </Typography>
-                    <Typography
-                      className={classes.cardDes}
-                      variant="body2"
-                      color="text.secondary"
-                    >
-                      Ask questions about HR policies. Upload policy PDFs and
-                      get streamed answers.
                     </Typography>
                   </Box>
                 </Card>

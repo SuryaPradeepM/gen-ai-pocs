@@ -58,6 +58,43 @@ const headerStyles = (theme) => ({
     display: "flex",
     justifyContent: "center",
   },
+  centerTitle: {
+    flex: 1,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  playzoneWrapper: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "relative",
+  },
+  playzoneTitle: {
+    fontFamily: "boldfamily",
+    fontSize: 22,
+    lineHeight: 1,
+    // gradient text for artistic look
+    background: "linear-gradient(90deg, #0460A9, #00A3B5)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    cursor: "default",
+    transition: "transform 220ms ease, opacity 220ms ease",
+    "&:hover": {
+      transform: "scale(1.06)",
+    },
+  },
+  playzoneAccent: {
+    width: 64,
+    height: 6,
+    borderRadius: 6,
+    marginTop: 6,
+    background: "linear-gradient(90deg,#ff7a18,#af002d,#319197)",
+    transition: "transform 320ms cubic-bezier(.2,.8,.2,1), opacity 220ms",
+    transform: "translateY(6px)",
+    opacity: 0.9,
+  },
   userParent: {
     display: "flex",
     alignItems: "center",
@@ -238,6 +275,13 @@ const headerStyles = (theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       fontSize: "14px",
+    },
+  },
+  // animate accent when title hovered (using JSS nested selector requires referencing the class)
+  "@global": {
+    ".MuiTypography-root:hover + .playzoneAccent": {
+      transform: "translateY(-4px) rotate(-6deg)",
+      opacity: 1,
     },
   },
 });

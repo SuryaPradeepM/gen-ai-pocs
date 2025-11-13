@@ -21,7 +21,7 @@ function App() {
         <Route path="/virtual_presenter" element={<PPTUpload />} />
         <Route path="/logo_generator" element={<LogoGenerator />} />
         <Route path="/rag-chatbot" element={<RAGChatbot />} />
-  <Route path="/db-genie" element={<DBGenie />} />
+        <Route path="/db-genie" element={<DBGenie />} />
         <Route path="/hr-policies-chatbot" element={<HRPoliciesChatbot />} />
       </Routes>
     </div>
