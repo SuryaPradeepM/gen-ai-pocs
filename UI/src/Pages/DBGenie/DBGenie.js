@@ -102,7 +102,9 @@ const DBGenie = () => {
     const currentInput = input;
     setMessages((prev) => [...prev, { role: "user", content: currentInput }]);
     setInput("");
-    setLoading(true);
+  // clear any previous visualization so new one will replace it visibly
+  setVisualization(null);
+  setLoading(true);
     // Let the user know we've started processing
     setStatusMessage("Accessing database... Please bear with us.");
 
@@ -328,6 +330,8 @@ const DBGenie = () => {
     const payloadData = tableData.data ?? tableData.rows ?? tableData?.schema ?? tableData;
 
     try {
+      // clear any previous visualization so new one replaces it
+      setVisualization(null);
       setLoading(true);
       const res = await fetch(`${baseUrl}/api/v1/visualize`, {
         method: "POST",
