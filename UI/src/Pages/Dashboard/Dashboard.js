@@ -13,17 +13,10 @@ import { useNavigate } from "react-router-dom";
 import genaiContext from "../../Context/genai-context";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { Scrollbars } from "react-custom-scrollbars-2";
-import pocLeftImage from "../../assets/pocLeftImage.svg";
-import pocRightImage from "../../assets/pocRightImage.svg";
-import dashboardUserImage from "../../assets/dashboardUserImage.svg";
-
-// import VirtualPresenterLogo from '../../assets/VirtualPresenterLogo'
 import VirtualPresenterLogo from "../../assets/VirtualPresenterLogo.svg";
 import DecisionWizardLogo from "../../assets/DecisionWizardLogo.svg";
 import meetingSummariesLogo from "../../assets/meetingSummariesLogo.svg";
-
 import FeviconOuterImage from "../../assets/FeviconOuterImage.svg";
-// FeviconOuterImage
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { CardActionArea } from "@mui/material";
@@ -34,6 +27,7 @@ import LaunchRoundedIcon from "@mui/icons-material/LaunchRounded";
 import { jwtDecode } from "jwt-decode";
 import ChatIcon from "@mui/icons-material/Chat";
 import PolicyIcon from "@mui/icons-material/Policy";
+import StorageIcon from "@mui/icons-material/Storage";
 
 function Dashboard({ classes }) {
   const navigate = useNavigate();
@@ -249,6 +243,37 @@ function Dashboard({ classes }) {
                       Chat with your documents using AI-powered RAG technology.
                       Upload PDFs and get intelligent responses based on their
                       content.
+                    </Typography>
+                  </Box>
+                </Card>
+
+                <Card
+                  onClick={() => {
+                    isServiceAvailable("db_genie") && navigate("/db-genie");
+                  }}
+                  className={`${classes.cardContainer} ${!isServiceAvailable("db_genie") && classes.disabledCard}`}
+                >
+                  <IconButton
+                    title="Go To DB Genie"
+                    className={classes.gotoPOCBtn}
+                    onClick={() => navigate("/db-genie")}
+                  >
+                    <LaunchRoundedIcon />
+                  </IconButton>
+                  <Box className={classes.cardHead}>
+                    <StorageIcon style={{ fontSize: 50, color: "#0460a9" }} />
+                  </Box>
+                  <Box className={classes.cardBody}>
+                    <Typography className={classes.cardHeading}>
+                      DB Genie
+                    </Typography>
+                    <Typography
+                      className={classes.cardDes}
+                      variant="body2"
+                      color="text.secondary"
+                    >
+                      Hybrid DB & document assistant — run SQL, get structured
+                      data, and generate visualizations from your database.
                     </Typography>
                   </Box>
                 </Card>

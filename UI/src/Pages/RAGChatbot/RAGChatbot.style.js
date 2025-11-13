@@ -26,6 +26,10 @@ export const Message = styled("div")(({ theme, role }) => ({
     role === "user"
       ? theme.palette.primary.contrastText
       : theme.palette.text.primary,
+  // Make messages use full width on very small screens to avoid cramped layout
+  [theme.breakpoints.down("sm")]: {
+    maxWidth: "100%",
+  },
 }));
 
 export const FileUploadSection = styled("div")(({ theme }) => ({

@@ -8,6 +8,7 @@ import PPTUpload from "./Pages/VirtualPresenter/FileUpload/fileUpload";
 import LogoGenerator from "./Pages/LogoGenerator/LogoGenerator";
 import RAGChatbot from "./Pages/RAGChatbot/RAGChatbot";
 import HRPoliciesChatbot from "./Pages/HRPoliciesChatbot/HRPoliciesChatbot";
+import DBGenie from "./Pages/DBGenie/DBGenie";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/virtual_presenter" element={<PPTUpload />} />
         <Route path="/logo_generator" element={<LogoGenerator />} />
         <Route path="/rag-chatbot" element={<RAGChatbot />} />
+  <Route path="/db-genie" element={<DBGenie />} />
         <Route path="/hr-policies-chatbot" element={<HRPoliciesChatbot />} />
       </Routes>
     </div>

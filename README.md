@@ -9,6 +9,7 @@ Gen AI PoCs is a collection of Proof of Concept (PoC) projects demonstrating var
 - **Logo_Generator/Logo_gen**: AI-based logo generation applications
 - **Meeting_Minutes**: Automated meeting minutes transcription and summarization
 - **RAG_Chatbot**: Retrieval-Augmented Generation chatbot implementation
+- **DB_Genie**: A dynamic AI-powered chatbot that combines vector-based document search with SQL database querying and visualization capabilities
 - **UI**: User interface components for the PoC applications
 
 ### Technology Stack
@@ -22,3 +23,4 @@ Gen AI PoCs is a collection of Proof of Concept (PoC) projects demonstrating var
 ### TODOs
 
 [] Updated deprecated / legacy code in mini apps
+[] Cleanup prompt formatting with dedent

@@ -1,11 +1,11 @@
-import hawkeyeLogo from "../../assets/logo.png";
+import headerLogo from "../../assets/chat-bot.png";
 const headerStyles = (theme) => ({
   headerSection: {
     borderRadius: 0,
     boxShadow: "none",
-    // background: '#50E2D0',
+    background: '#e0f5f2ff',
     borderBottom: "1px solid #e3e3e3",
-    // height: 72,
+    height: 72,
     display: "flex",
     alignItems: "center",
     position: "relative",
@@ -40,10 +40,12 @@ const headerStyles = (theme) => ({
     alignItems: "center",
   },
   logo: {
-    width: 155,
-    height: 25,
-    backgroundImage: `url(${hawkeyeLogo})`,
-    backgroundSize: "cover",
+    width: 56,
+    /* increase container height so square logos have room; keep aspect visually similar to header */
+    height: 55,
+    backgroundImage: `url(${headerLogo})`,
+    /* use contain so square images won't be cropped or stretched to fill a wide rectangle */
+    backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     // [theme.breakpoints.down('md')]: {
