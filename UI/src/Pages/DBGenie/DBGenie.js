@@ -7,6 +7,7 @@ import {
   Box,
   CircularProgress,
   Grid,
+  InputAdornment,
 } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -70,12 +71,15 @@ const DBGenie = () => {
         return;
       }
       try {
+        setStatusMessage("Creating session...");
         const res = await fetch(`${baseUrl}/api/v1/session`, { method: "POST" });
         if (!res.ok) throw new Error("Failed to create session");
         const data = await res.json();
         setSessionId(data.session_id);
+        setStatusMessage("Session created.");
       } catch (e) {
         console.error("Error creating DB Genie session:", e);
+        setStatusMessage("");
       }
     };
     createSession();
@@ -99,6 +103,8 @@ const DBGenie = () => {
     setMessages((prev) => [...prev, { role: "user", content: currentInput }]);
     setInput("");
     setLoading(true);
+    // Let the user know we've started processing
+    setStatusMessage("Accessing database... Please bear with us.");
 
     try {
       const response = await fetch(`${baseUrl}/api/v1/chat/stream`, {
@@ -114,8 +120,10 @@ const DBGenie = () => {
 
       if (!response.body) throw new Error("Response body not available");
 
-      // Add assistant placeholder
-      setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
+  // Add assistant placeholder
+  setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
+  // Indicate streaming will begin
+  setStatusMessage("Processing request... streaming response shortly...");
 
       const reader = response.body.getReader();
       const decoder = new TextDecoder("utf-8");
@@ -132,31 +140,68 @@ const DBGenie = () => {
             const trimmed = line.trim();
             if (!trimmed.startsWith("data:")) continue;
             const payload = trimmed.slice(5).trim();
-            if (!payload) continue;
+            if (!payload || payload === "[DONE]") continue;
 
             try {
               const json = JSON.parse(payload);
 
-              // Text delta
-              const delta = json?.content ?? "";
-              if (delta) {
-                setMessages((prev) => {
-                  const next = [...prev];
-                  const last = next[next.length - 1];
-                  if (last && last.role === "assistant") {
-                    last.content = (last.content || "") + delta;
+              // New-style SSE: { type: "content", content: "..." } or { type: "visualization", data: { image_base64: "...", ... } }
+              if (json.type === "content" || json.type === "text") {
+                // update a friendly status when text starts streaming (unless we're in a visualization creation step)
+                setStatusMessage((prev) => (prev && prev.toLowerCase().includes("creating plot") ? prev : "Streaming response..."));
+                const delta = json.content ?? "";
+                if (delta) {
+                  setMessages((prev) => {
+                    const next = [...prev];
+                    const last = next[next.length - 1];
+                    if (last && last.role === "assistant") {
+                      last.content = (last.content || "") + delta;
+                    }
+                    return next;
+                  });
+                }
+              } else if (json.type === "visualization") {
+                const vizData = json.data || {};
+                // Show intermediate status about plot creation
+                setStatusMessage("Creating plot...");
+                // prefer image or image_base64
+                let src = vizData.image || vizData.image_base64 || null;
+                if (src && typeof src === "string") {
+                  if (!src.startsWith("data:")) {
+                    // assume base64 png if raw base64 provided
+                    src = `data:image/png;base64,${src}`;
                   }
-                  return next;
-                });
-              }
+                }
+                // store a normalized visualization object that the existing renderer can consume
+                const vizObj = { ...vizData, image: src };
+                setVisualization(vizObj);
 
-              // visualization or structured data
-              if (json.visualization) {
-                setVisualization(json.visualization);
-              }
-
-              if (json.data) {
-                setTableData(json.data);
+                // optionally set table data if supplied inside visualization payload
+                if (vizData.data) {
+                  setTableData(vizData.data);
+                }
+                // mark plot ready (will clear automatically after a few seconds)
+                setStatusMessage("Plot Ready. Kindly check your chart form the right side panel.");
+              } else {
+                // backward-compat: handle older shape where content/visualization/data may be top-level keys
+                const delta = json?.content ?? "";
+                if (delta) {
+                  setMessages((prev) => {
+                    const next = [...prev];
+                    const last = next[next.length - 1];
+                    if (last && last.role === "assistant") {
+                      last.content = (last.content || "") + delta;
+                    }
+                    return next;
+                  });
+                }
+                if (json.visualization) {
+                  // keep older visualization handling
+                  setVisualization(json.visualization);
+                }
+                if (json.data) {
+                  setTableData(json.data);
+                }
               }
             } catch (e) {
               console.error("Failed to parse SSE payload", e, payload);
@@ -401,12 +446,14 @@ const DBGenie = () => {
   // Simple visualization renderer: if visualization contains image data, show it; else show JSON
   const renderVisualization = (viz) => {
     if (!viz) return null;
-    if (viz.image && typeof viz.image === "string") {
-      // assume base64/data-url
+    // accept either normalized viz.image or legacy image_base64 field
+    const imageSrc = viz.image || viz.image_base64 || null;
+    if (imageSrc && typeof imageSrc === "string") {
+      const src = imageSrc.startsWith("data:") ? imageSrc : `data:image/png;base64,${imageSrc}`;
       return (
         <img
-          src={viz.image}
-          alt="visualization"
+          src={src}
+          alt={viz.chart_type ? `${viz.chart_type} visualization` : "visualization"}
           style={{
             width: "100%",
             maxWidth: "100%",
@@ -455,11 +502,11 @@ const DBGenie = () => {
             Execute SQL
           </Button>
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        {/* <Grid item xs={12} sm={6} md={3}>
           <Button fullWidth variant="contained" onClick={createVisualization} disabled={loading || !tableData}>
             Create Visualization
           </Button>
-        </Grid>
+        </Grid> */}
       </Grid>
 
       {/* Main content: left = chat, right = data/visualization */}
@@ -501,6 +548,14 @@ const DBGenie = () => {
                 }}
                 disabled={loading}
                 InputProps={{
+                  // show transient status inside the input on the left while loading
+                  startAdornment: loading && statusMessage ? (
+                    <InputAdornment position="start">
+                      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                        <Typography variant="body2" color="textSecondary">{statusMessage}</Typography>
+                      </Box>
+                    </InputAdornment>
+                  ) : null,
                   endAdornment: (
                     <Button onClick={handleSendStream} disabled={loading || !input.trim()} sx={{ ml: 1 }}>
                       {loading ? <CircularProgress size={24} /> : <SendIcon />}
@@ -516,7 +571,7 @@ const DBGenie = () => {
             <Paper elevation={3} sx={{ height: { xs: "40vh", sm: "60vh", md: "65vh" }, maxHeight: "80vh", overflow: "auto", p: 2 }}>
             {/** Small status area for actions like refresh/sample/visualize */}
             <Box sx={{ mb: 1 }}>
-              {statusMessage && (
+              {statusMessage && !loading && (
                 <Typography variant="body2" color="textSecondary">{statusMessage}</Typography>
               )}
             </Box>
