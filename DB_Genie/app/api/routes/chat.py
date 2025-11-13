@@ -126,19 +126,19 @@ async def prepare_messages_async(request: Request, session_id: str, user_message
 
             # Check if we should auto-generate visualization
             data = sql_result["data"]
-            if len(data) >= 2 and len(data) <= 50:  # Auto-viz for 2-50 rows
-                # Check if data has numeric columns
+            if len(data) >= 2 and len(data) <= 50:
                 first_row = data[0]
                 has_numeric = any(
                     isinstance(v, (int, float)) for v in first_row.values()
                 )
 
                 if has_numeric or needs_visualization:
-                    # Generate visualization automatically
+                    # FIX: Pass user_query for LLM context
                     viz_result = visualization_service.create_visualization(
                         data=data,
                         chart_type="auto",
-                        title=None,  # Will auto-generate
+                        title=None,
+                        user_query=user_message,
                     )
 
                     if viz_result["success"]:
@@ -153,9 +153,12 @@ async def prepare_messages_async(request: Request, session_id: str, user_message
         sql_result = sql_agent_service.query_with_data(user_message)
 
         if sql_result["success"] and sql_result.get("data"):
-            # Generate visualization
+            # FIX: Pass user_query for LLM context
             viz_result = visualization_service.create_visualization(
-                data=sql_result["data"], chart_type="auto", title=None
+                data=sql_result["data"],
+                chart_type="auto",
+                title=None,
+                user_query=user_message,
             )
 
             if viz_result["success"]:
@@ -165,6 +168,36 @@ async def prepare_messages_async(request: Request, session_id: str, user_message
                 context_text = f"Data retrieved but visualization failed: {viz_result['error']}\n\nData: {sql_result['answer']}"
         else:
             context_text = f"Could not retrieve data for visualization: {sql_result.get('error', 'Unknown error')}"
+
+    elif query_type == QueryType.HYBRID:
+        # Combine vector search and SQL query
+        context = await vector_store_service.similarity_search(user_message)
+        policy_context = "\n\n".join([doc.page_content for doc in context])
+
+        # Get SQL data
+        if sql_agent_service:
+            sql_result = sql_agent_service.query_with_data(user_message)
+            sql_context = sql_result["answer"] if sql_result["success"] else ""
+
+            # Auto-visualize if data available
+            if sql_result["success"] and sql_result.get("data"):
+                data = sql_result["data"]
+                if len(data) >= 2 and len(data) <= 50:
+                    # FIX: Pass user_query for LLM context
+                    viz_result = visualization_service.create_visualization(
+                        data=data,
+                        chart_type="auto",
+                        title=None,
+                        user_query=user_message,  # NEW: Pass the query!
+                    )
+                    if viz_result["success"]:
+                        visualization_data = viz_result
+        else:
+            sql_context = ""
+
+        context_text = (
+            f"Policy Context:\n{policy_context}\n\nDatabase Information:\n{sql_context}"
+        )
 
     elif query_type == QueryType.HYBRID:
         # Combine vector search and SQL query
@@ -500,7 +533,8 @@ async def create_visualization(request: Request, viz_request: dict):
         title=viz_request.get("title"),
         x_column=viz_request.get("x_column"),
         y_column=viz_request.get("y_column"),
-        interactive=False,  # Always static
+        interactive=False,  # Only static plots for now
+        user_query=viz_request.get("user_query"),
     )
 
     if not result["success"]:
